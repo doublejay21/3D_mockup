@@ -1,0 +1,3 @@
+fastapi
+uvicorn
+ikea_api[httpx]
