@@ -20,7 +20,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$t
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Environment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/Environment.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Edges$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/Edges.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$web$2f$Html$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/web/Html.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$TransformControls$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/TransformControls.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Gltf$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/Gltf.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/three/build/three.core.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
@@ -36,6 +35,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.mjs [app-ssr] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sofa$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sofa$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sofa.mjs [app-ssr] (ecmascript) <export default as Sofa>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.mjs [app-ssr] (ecmascript) <export default as Loader2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rotate-ccw.mjs [app-ssr] (ecmascript) <export default as RotateCcw>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye.mjs [app-ssr] (ecmascript) <export default as Eye>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$move$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Move$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/move.mjs [app-ssr] (ecmascript) <export default as Move>");
 "use client";
 ;
 ;
@@ -107,7 +109,7 @@ const materials = {
 // ======================================================
 // COMPONENTS
 // ======================================================
-function Wall({ wall, doors, windows, isNight, wallColor }) {
+function Wall({ wall, doors, windows, isNight, wallColor, isSelected, onSelect }) {
     const result = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         if (!isValidPoint(wall.start) || !isValidPoint(wall.end)) return null;
         const dx = Number(wall.end.x) - Number(wall.start.x);
@@ -146,6 +148,10 @@ function Wall({ wall, doors, windows, isNight, wallColor }) {
             -result.angle,
             0
         ],
+        onClick: (e)=>{
+            e.stopPropagation();
+            onSelect();
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mesh", {
                 position: [
@@ -170,7 +176,9 @@ function Wall({ wall, doors, windows, isNight, wallColor }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("meshStandardMaterial", {
                         color: isNight ? "#dcdfe4" : wallColor,
                         roughness: 0.8,
-                        metalness: 0.1
+                        metalness: 0.1,
+                        emissive: isSelected ? "#38bdf8" : "#000000",
+                        emissiveIntensity: isSelected ? 0.3 : 0
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
                         lineNumber: 108,
@@ -342,7 +350,7 @@ function Wall({ wall, doors, windows, isNight, wallColor }) {
         columnNumber: 9
     }, this);
 }
-function RoomFloor({ room, floorTextureUrl }) {
+function RoomFloor({ room, floorTextureUrl, isSelected, onSelect }) {
     const { geometry, labelPos } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         const polygon = Array.isArray(room.polygon) ? room.polygon.filter(isValidPoint) : [];
         if (polygon.length < 3) return {
@@ -386,27 +394,11 @@ function RoomFloor({ room, floorTextureUrl }) {
             tex.wrapS = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RepeatWrapping"];
             tex.wrapT = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RepeatWrapping"];
             tex.repeat.set(2, 2);
+            tex.colorSpace = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SRGBColorSpace"];
             setLoadedTexture(tex);
-        });
+        }, undefined, (err)=>console.error("Error loading floor texture:", err));
     }, [
         floorTextureUrl
-    ]);
-    const material = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
-        if (loadedTexture) {
-            return new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MeshStandardMaterial"]({
-                map: loadedTexture,
-                roughness: 0.7,
-                metalness: 0
-            });
-        }
-        return new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MeshStandardMaterial"]({
-            color: getRoomColor(room.name),
-            roughness: 0.85,
-            metalness: 0
-        });
-    }, [
-        room.name,
-        loadedTexture
     ]);
     if (!geometry) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
@@ -415,6 +407,10 @@ function RoomFloor({ room, floorTextureUrl }) {
             -0.02,
             0
         ],
+        onClick: (e)=>{
+            e.stopPropagation();
+            onSelect();
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mesh", {
                 geometry: geometry,
@@ -424,10 +420,21 @@ function RoomFloor({ room, floorTextureUrl }) {
                     0
                 ],
                 receiveShadow: true,
-                material: material
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("meshStandardMaterial", {
+                    map: loadedTexture || undefined,
+                    color: loadedTexture ? "#ffffff" : getRoomColor(room.name),
+                    roughness: 0.8,
+                    metalness: 0.1,
+                    emissive: isSelected ? "#38bdf8" : "#000000",
+                    emissiveIntensity: isSelected ? 0.3 : 0
+                }, loadedTexture ? loadedTexture.uuid : 'none', false, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 215,
+                    columnNumber: 17
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 223,
+                lineNumber: 214,
                 columnNumber: 13
             }, this),
             room.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$web$2f$Html$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Html"], {
@@ -452,22 +459,22 @@ function RoomFloor({ room, floorTextureUrl }) {
                     children: room.name
                 }, void 0, false, {
                     fileName: "[project]/components/House3DViewer.tsx",
-                    lineNumber: 226,
+                    lineNumber: 227,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 225,
+                lineNumber: 226,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/House3DViewer.tsx",
-        lineNumber: 222,
+        lineNumber: 213,
         columnNumber: 9
     }, this);
 }
-function BuildingFloor({ house, bounds, floorTextureUrl }) {
+function BuildingFloor({ house, bounds, floorTextureUrl, isSelected, onSelect }) {
     let width = safeNumber(house.building?.width, 0);
     let depth = safeNumber(house.building?.depth, 0);
     let posX = width / 2;
@@ -490,51 +497,64 @@ function BuildingFloor({ house, bounds, floorTextureUrl }) {
         loader.load(floorTextureUrl, (tex)=>{
             tex.wrapS = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RepeatWrapping"];
             tex.wrapT = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["RepeatWrapping"];
-            tex.repeat.set(width / 5, depth / 5);
+            tex.repeat.set(width / 2, depth / 2);
+            tex.colorSpace = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SRGBColorSpace"];
             setLoadedTexture(tex);
-        });
+        }, undefined, (err)=>console.error("Error loading building floor texture:", err));
     }, [
         floorTextureUrl,
         width,
         depth
     ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mesh", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
         position: [
             posX,
-            -0.03,
+            -0.04,
             posZ
         ],
-        rotation: [
-            -Math.PI / 2,
-            0,
-            0
-        ],
-        receiveShadow: true,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("planeGeometry", {
-                args: [
-                    width,
-                    depth
-                ]
-            }, void 0, false, {
-                fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 267,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("meshStandardMaterial", {
-                map: loadedTexture,
-                color: loadedTexture ? "#ffffff" : "#cbd5e1",
-                roughness: 0.9,
-                metalness: 0
-            }, void 0, false, {
-                fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 268,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mesh", {
+            rotation: [
+                -Math.PI / 2,
+                0,
+                0
+            ],
+            receiveShadow: true,
+            onClick: (e)=>{
+                e.stopPropagation();
+                onSelect();
+            },
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("planeGeometry", {
+                    args: [
+                        width,
+                        depth
+                    ]
+                }, void 0, false, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 275,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("meshStandardMaterial", {
+                    map: loadedTexture || undefined,
+                    color: loadedTexture ? "#ffffff" : materials.floorFallback.color,
+                    roughness: 0.9,
+                    metalness: 0,
+                    emissive: isSelected ? "#38bdf8" : "#000000",
+                    emissiveIntensity: isSelected ? 0.3 : 0
+                }, loadedTexture ? loadedTexture.uuid : 'none', false, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 276,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/House3DViewer.tsx",
+            lineNumber: 274,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/components/House3DViewer.tsx",
-        lineNumber: 266,
+        lineNumber: 273,
         columnNumber: 9
     }, this);
 }
@@ -596,6 +616,12 @@ function CameraController({ mode, bounds }) {
             ctrl.maxPolarAngle = 0; // Lock to top down
             ctrl.minPolarAngle = 0;
             ctrl.update();
+        } else if (mode === 'person') {
+            camera.position.set(0, 1.6, 2); // 1.6m eye level
+            ctrl.target.set(0, 1.6, 0);
+            ctrl.maxPolarAngle = Math.PI; // Full look around
+            ctrl.minPolarAngle = 0;
+            ctrl.update();
         } else {
             camera.position.set(bounds.width * 1.2, bounds.width * 1.0, bounds.width * 1.2);
             ctrl.target.set(0, 0.5, 0);
@@ -614,81 +640,208 @@ function CameraController({ mode, bounds }) {
 // ======================================================
 // 3D FURNITURE PLACEMENT COMPONENT
 // ======================================================
-function FurnitureItem({ item, onUpdate, onRemove }) {
+function FurnitureItem({ item, isSelected, transformMode, onSelect, onUpdate, setDragContext }) {
     const { scene } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Gltf$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useGLTF"])(item.modelUrl);
-    const clonedScene = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>scene.clone(), [
+    // Process the scene once to center it and place it on the floor
+    const processedScene = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const c = scene.clone();
+        // Calculate bounding box of the original model
+        const box = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Box3"]().setFromObject(c);
+        const center = box.getCenter(new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Vector3"]());
+        // Offset the original scene so its bottom is at Y=0 and it is centered on X/Z
+        c.position.x = -center.x;
+        c.position.y = -box.min.y;
+        c.position.z = -center.z;
+        // Create a wrapper group. The TransformControls will move this group.
+        const wrapper = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Group"]();
+        wrapper.add(c);
+        return wrapper;
+    }, [
         scene
     ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$TransformControls$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TransformControls"], {
-        mode: "translate",
-        position: item.position,
-        onMouseUp: (e)=>{
-            if (e && e.target && e.target.object) {
-                onUpdate(item.id, e.target.object.position);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        processedScene.traverse((child)=>{
+            if (child.isMesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+            }
+        });
+    }, [
+        processedScene
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
+        onClick: (e)=>{
+            e.stopPropagation();
+            onSelect();
+        },
+        onPointerDown: (e)=>{
+            if (isSelected && setDragContext) {
+                e.stopPropagation();
+                setDragContext({
+                    id: item.id,
+                    offsetX: item.position[0] - e.point.x,
+                    offsetZ: item.position[2] - e.point.z
+                });
             }
         },
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("primitive", {
-                    object: clonedScene
-                }, void 0, false, {
-                    fileName: "[project]/components/House3DViewer.tsx",
-                    lineNumber: 337,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$web$2f$Html$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Html"], {
-                    position: [
-                        0,
-                        1.5,
-                        0
-                    ],
-                    center: true,
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: (e)=>{
-                            e.stopPropagation();
-                            onRemove(item.id);
-                        },
-                        style: {
-                            background: '#ef4444',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '50%',
-                            width: '24px',
-                            height: '24px',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.3)'
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                            size: 12
-                        }, void 0, false, {
-                            fileName: "[project]/components/House3DViewer.tsx",
-                            lineNumber: 343,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 339,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/House3DViewer.tsx",
-                    lineNumber: 338,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("primitive", {
+            object: processedScene,
+            position: item.position,
+            rotation: item.rotation
+        }, void 0, false, {
             fileName: "[project]/components/House3DViewer.tsx",
-            lineNumber: 336,
+            lineNumber: 390,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/House3DViewer.tsx",
-        lineNumber: 327,
+        lineNumber: 377,
         columnNumber: 9
     }, this);
+}
+class FurnitureErrorBoundary extends __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Component"] {
+    constructor(props){
+        super(props);
+        this.state = {
+            hasError: false
+        };
+    }
+    static getDerivedStateFromError() {
+        return {
+            hasError: true
+        };
+    }
+    render() {
+        if (this.state.hasError) {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
+                position: this.props.position,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$web$2f$Html$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Html"], {
+                    center: true,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            background: 'rgba(220,38,38,0.9)',
+                            color: 'white',
+                            padding: '4px 8px',
+                            borderRadius: '4px',
+                            fontSize: '12px',
+                            whiteSpace: 'nowrap'
+                        },
+                        children: "Failed to load model"
+                    }, void 0, false, {
+                        fileName: "[project]/components/House3DViewer.tsx",
+                        lineNumber: 403,
+                        columnNumber: 25
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 402,
+                    columnNumber: 21
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/House3DViewer.tsx",
+                lineNumber: 401,
+                columnNumber: 17
+            }, this);
+        }
+        return this.props.children;
+    }
+}
+function FurnitureLoading({ position }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("group", {
+        position: position,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$web$2f$Html$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Html"], {
+            center: true,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    background: 'rgba(0,0,0,0.8)',
+                    color: 'white',
+                    padding: '4px 8px',
+                    borderRadius: '4px',
+                    fontSize: '12px',
+                    whiteSpace: 'nowrap'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin"
+                        }, void 0, false, {
+                            fileName: "[project]/components/House3DViewer.tsx",
+                            lineNumber: 420,
+                            columnNumber: 25
+                        }, this),
+                        "Loading 3D..."
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 419,
+                    columnNumber: 21
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/House3DViewer.tsx",
+                lineNumber: 418,
+                columnNumber: 17
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/components/House3DViewer.tsx",
+            lineNumber: 417,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/components/House3DViewer.tsx",
+        lineNumber: 416,
+        columnNumber: 9
+    }, this);
+}
+// ======================================================
+// CUSTOM DRAG CONTROLLER
+// ======================================================
+function DragController({ dragContext, setDragContext, onUpdate }) {
+    const { camera, raycaster, gl } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$fiber$2f$dist$2f$events$2d$156d8d12$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__C__as__useThree$3e$__["useThree"])();
+    const plane = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Plane"](new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Vector3"](0, 1, 0), 0), []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!dragContext) return;
+        const handlePointerMove = (e)=>{
+            const rect = gl.domElement.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width * 2 - 1;
+            const y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+            const pointerCoords = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Vector2"](x, y);
+            raycaster.setFromCamera(pointerCoords, camera);
+            const target = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Vector3"]();
+            raycaster.ray.intersectPlane(plane, target);
+            if (target) {
+                onUpdate(dragContext.id, {
+                    x: target.x + dragContext.offsetX,
+                    y: 0,
+                    z: target.z + dragContext.offsetZ
+                });
+            }
+        };
+        const handlePointerUp = ()=>{
+            if (setDragContext) {
+                setDragContext(null, Date.now()); // Pass timestamp to indicate when drag ended
+            }
+        };
+        window.addEventListener('pointermove', handlePointerMove);
+        window.addEventListener('pointerup', handlePointerUp);
+        return ()=>{
+            window.removeEventListener('pointermove', handlePointerMove);
+            window.removeEventListener('pointerup', handlePointerUp);
+        };
+    }, [
+        dragContext,
+        camera,
+        raycaster,
+        gl,
+        onUpdate,
+        setDragContext,
+        plane
+    ]);
+    return null;
 }
 function House3DViewer({ house }) {
     const [mode, setMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('orbit');
@@ -696,10 +849,11 @@ function House3DViewer({ house }) {
     const [isFullscreen, setIsFullscreen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // New states for Materials Phase 1
-    const [wallColor, setWallColor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('#f8f9fa');
-    const [floorTextureUrl, setFloorTextureUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    // New states for Materials Phase 1 (Upgraded)
+    const [wallColorsMap, setWallColorsMap] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
+    const [floorTexturesMap, setFloorTexturesMap] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
     const [showMaterialPanel, setShowMaterialPanel] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [selectedElement, setSelectedElement] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     // New states for IKEA Furniture Phase 3
     const [showSearchPanel, setShowSearchPanel] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
@@ -707,36 +861,58 @@ function House3DViewer({ house }) {
     const [isSearching, setIsSearching] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [placedItems, setPlacedItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loadingModelId, setLoadingModelId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [selectedItemId, setSelectedItemId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [transformMode, setTransformMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('translate');
+    const [dragContext, setDragContextState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const dragEndTimeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(0);
+    const setDragContext = (ctx, endTime)=>{
+        if (endTime) dragEndTimeRef.current = endTime;
+        setDragContextState(ctx);
+    };
+    const selectedItem = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>placedItems.find((i)=>i.id === selectedItemId), [
+        placedItems,
+        selectedItemId
+    ]);
     const floorTextures = [
         {
             id: 'wood1',
-            name: 'Light Wood',
-            url: 'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?auto=format&fit=crop&w=800&q=80'
+            name: 'Hardwood',
+            url: 'https://threejs.org/examples/textures/hardwood2_diffuse.jpg'
         },
         {
             id: 'wood2',
             name: 'Dark Wood',
-            url: 'https://images.unsplash.com/photo-1521105955639-6888c3a1da7c?auto=format&fit=crop&w=800&q=80'
+            url: 'https://threejs.org/examples/textures/crate.gif'
         },
         {
-            id: 'wood3',
-            name: 'Oak Wood',
-            url: 'https://images.unsplash.com/photo-1581850518616-bcb8077a2336?auto=format&fit=crop&w=800&q=80'
+            id: 'grass',
+            name: 'Grass',
+            url: 'https://threejs.org/examples/textures/terrain/grasslight-big.jpg'
         },
         {
-            id: 'tile1',
-            name: 'White Tile',
-            url: 'https://images.unsplash.com/photo-1517409264427-0c7f1a8c2f21?auto=format&fit=crop&w=800&q=80'
-        },
-        {
-            id: 'tile2',
-            name: 'Grey Tile',
-            url: 'https://images.unsplash.com/photo-1620215714442-9989baebff59?auto=format&fit=crop&w=800&q=80'
+            id: 'brick',
+            name: 'Red Brick',
+            url: 'https://threejs.org/examples/textures/brick_diffuse.jpg'
         },
         {
             id: 'concrete',
             name: 'Concrete',
-            url: 'https://images.unsplash.com/photo-1516016149174-8394e3305101?auto=format&fit=crop&w=800&q=80'
+            url: 'https://threejs.org/examples/textures/planets/moon_1024.jpg'
+        },
+        {
+            id: 'water',
+            name: 'Water Pool',
+            url: 'https://threejs.org/examples/textures/water.jpg'
+        },
+        {
+            id: 'grid',
+            name: 'Blueprint Grid',
+            url: 'https://threejs.org/examples/textures/uv_grid_opengl.jpg'
+        },
+        {
+            id: 'lava',
+            name: 'Lava',
+            url: 'https://threejs.org/examples/textures/lava/lavatile.jpg'
         }
     ];
     const wallColors = [
@@ -788,78 +964,60 @@ function House3DViewer({ house }) {
         try {
             const res = await fetch(`http://localhost:8000/api/search?q=${encodeURIComponent(searchQuery)}&limit=10`);
             const data = await res.json();
-            // Safely extract standard IKEA search format
-            let parsedItems = [];
-            const nodes = data?.searchResultPage?.products?.main?.items;
-            if (Array.isArray(nodes)) {
-                parsedItems = nodes.map((i)=>({
-                        id: i?.product?.itemNo || i?.product?.id || Math.random().toString(),
-                        name: i?.product?.name || 'IKEA Item',
-                        type: i?.product?.typeName || '',
-                        image: i?.product?.mainImageUrl || ''
-                    })).filter((i)=>i.id);
-                // Filter to only include items that actually have a 3D model available
-                const validItems = await Promise.all(parsedItems.map(async (item)=>{
-                    try {
-                        const r = await fetch(`http://localhost:8000/api/item/${item.id}/3d`);
-                        const d = await r.json();
-                        const str = JSON.stringify(d);
-                        if (str.match(/https:\/\/[^"]+\.glb/i) || str.match(/https:\/\/[^"]+\.gltf/i)) {
-                            return item; // Has 3D model
-                        }
-                    } catch (e) {}
-                    return null;
-                }));
-                let items = validItems.filter(Boolean);
-                setSearchResults(items);
-                if (items.length === 0) {
-                    alert("ไม่พบสินค้าที่มีโมเดล 3D จากคำค้นหานี้ครับ ลองเปลี่ยนคำค้นหาดูนะครับ");
-                }
-            } else {
-                setSearchResults([]);
+            setSearchResults(data || []);
+            if (!data || data.length === 0) {
+                alert("ไม่พบโมเดล 3D จากคำค้นหานี้ครับ ลองเปลี่ยนคำค้นหาเป็นภาษาอังกฤษ เช่น chair, table, sofa ดูนะครับ");
             }
-        } catch (err) {
-            console.error("Search failed", err);
+        } catch (e) {
+            console.error(e);
+            alert("Error searching for items");
         }
         setIsSearching(false);
     };
-    const handleAddItem = async (itemCode, name)=>{
+    const handleAddItem = async (itemCode, name, preFetchedUrl)=>{
+        if (loadingModelId) return;
         setLoadingModelId(itemCode);
-        try {
-            const res = await fetch(`http://localhost:8000/api/item/${itemCode}/3d`);
-            const data = await res.json();
-            // Find GLB or GLTF URL in the raw JSON response
-            const str = JSON.stringify(data);
-            const match = str.match(/https:\/\/[^"]+\.glb/i) || str.match(/https:\/\/[^"]+\.gltf/i);
-            if (match && match[0]) {
-                const modelUrl = match[0];
-                const newItem = {
-                    id: Math.random().toString(36).substring(7),
-                    itemCode,
-                    name,
-                    modelUrl,
-                    position: [
-                        0,
-                        0,
-                        0
-                    ],
-                    rotation: [
-                        0,
-                        0,
-                        0
-                    ]
-                };
-                setPlacedItems((prev)=>[
-                        ...prev,
-                        newItem
-                    ]);
-                setShowSearchPanel(false);
-            } else {
-                alert(`ขออภัยครับ สินค้าชิ้นนี้ (${name}) ไม่มีโมเดล 3D ให้บริการจาก IKEA API`);
+        let urlToLoad = preFetchedUrl;
+        if (!urlToLoad) {
+            try {
+                const res = await fetch(`http://localhost:8000/api/item/${itemCode}/3d`);
+                const data = await res.json();
+                if (data.modelUrl) {
+                    urlToLoad = data.modelUrl;
+                } else {
+                    const str = JSON.stringify(data);
+                    const match = str.match(/(https:\/\/[^"']*\.(glb|gltf))/i);
+                    if (match) urlToLoad = match[1];
+                }
+            } catch (e) {
+                console.error("Failed to load 3D model", e);
+                alert("เกิดข้อผิดพลาดในการดึงไฟล์ 3D จากเซิร์ฟเวอร์");
             }
-        } catch (err) {
-            console.error("Failed to load 3D model", err);
-            alert("เกิดข้อผิดพลาดในการดึงไฟล์ 3D จากเซิร์ฟเวอร์");
+        }
+        if (urlToLoad) {
+            const newItem = {
+                id: Math.random().toString(36).substring(7),
+                itemCode,
+                name,
+                modelUrl: urlToLoad,
+                position: [
+                    bounds.centerX,
+                    0,
+                    bounds.centerZ
+                ],
+                rotation: [
+                    0,
+                    0,
+                    0
+                ]
+            };
+            setPlacedItems((prev)=>[
+                    ...prev,
+                    newItem
+                ]);
+            setShowSearchPanel(false);
+        } else {
+            alert(`ขออภัยครับ สินค้าชิ้นนี้ (${name}) ไม่มีโมเดล 3D ให้บริการ`);
         }
         setLoadingModelId(null);
     };
@@ -879,7 +1037,7 @@ function House3DViewer({ house }) {
             children: "No house data or walls generated."
         }, void 0, false, {
             fileName: "[project]/components/House3DViewer.tsx",
-            lineNumber: 487,
+            lineNumber: 607,
             columnNumber: 13
         }, this);
     }
@@ -908,7 +1066,8 @@ function House3DViewer({ house }) {
             overflow: "hidden",
             borderRadius: isFullscreen ? "0px" : "14px",
             position: "relative",
-            backgroundColor: isNight ? "#0f111a" : "#1c1c28"
+            backgroundColor: isNight ? "#0f111a" : "#1c1c28",
+            fontFamily: 'system-ui, sans-serif'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -916,54 +1075,56 @@ function House3DViewer({ house }) {
                     position: 'absolute',
                     top: '16px',
                     left: '16px',
-                    zIndex: 10,
+                    zIndex: 20,
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'flex-start'
+                    alignItems: 'flex-start',
+                    gap: '8px'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setShowSearchPanel(!showSearchPanel),
                         style: {
-                            background: showSearchPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.8)',
+                            background: showSearchPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.65)',
                             border: '1px solid rgba(255,255,255,0.1)',
                             color: 'white',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
-                            fontSize: '13px'
+                            backdropFilter: 'blur(12px)',
+                            fontSize: '13px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sofa$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sofa$3e$__["Sofa"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 521,
+                                lineNumber: 638,
                                 columnNumber: 21
                             }, this),
                             " Add Furniture"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 517,
+                        lineNumber: 637,
                         columnNumber: 17
                     }, this),
                     showSearchPanel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            background: 'rgba(15, 23, 42, 0.95)',
-                            border: '1px solid rgba(255,255,255,0.15)',
-                            borderRadius: '12px',
+                            background: 'rgba(15, 23, 42, 0.75)',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            borderRadius: '16px',
                             padding: '16px',
                             width: '320px',
-                            backdropFilter: 'blur(10px)',
-                            marginTop: '8px',
+                            backdropFilter: 'blur(16px)',
                             display: 'flex',
                             flexDirection: 'column',
                             gap: '12px',
+                            boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
                             maxHeight: '450px'
                         },
                         children: [
@@ -971,30 +1132,31 @@ function House3DViewer({ house }) {
                                 style: {
                                     color: 'white',
                                     margin: '0',
-                                    fontSize: '14px',
+                                    fontSize: '15px',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: '6px'
+                                    gap: '8px',
+                                    fontWeight: '600'
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                                        size: 14
+                                        size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 526,
-                                        columnNumber: 138
+                                        lineNumber: 642,
+                                        columnNumber: 157
                                     }, this),
-                                    " Search IKEA"
+                                    " Catalog"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 526,
+                                lineNumber: 642,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     display: 'flex',
-                                    gap: '6px'
+                                    gap: '8px'
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1005,16 +1167,17 @@ function House3DViewer({ house }) {
                                         placeholder: "e.g. Sofa, Billy, Table",
                                         style: {
                                             flex: 1,
-                                            padding: '8px',
-                                            borderRadius: '6px',
-                                            border: '1px solid rgba(255,255,255,0.2)',
-                                            background: 'rgba(0,0,0,0.3)',
+                                            padding: '8px 12px',
+                                            borderRadius: '8px',
+                                            border: '1px solid rgba(255,255,255,0.15)',
+                                            background: 'rgba(0,0,0,0.4)',
                                             color: 'white',
-                                            outline: 'none'
+                                            outline: 'none',
+                                            fontSize: '13px'
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 528,
+                                        lineNumber: 644,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1025,7 +1188,7 @@ function House3DViewer({ house }) {
                                             color: '#0f172a',
                                             border: 'none',
                                             padding: '0 12px',
-                                            borderRadius: '6px',
+                                            borderRadius: '8px',
                                             cursor: 'pointer',
                                             fontWeight: 'bold'
                                         },
@@ -1034,18 +1197,18 @@ function House3DViewer({ house }) {
                                             className: "animate-spin"
                                         }, void 0, false, {
                                             fileName: "[project]/components/House3DViewer.tsx",
-                                            lineNumber: 537,
+                                            lineNumber: 646,
                                             columnNumber: 48
                                         }, this) : 'Go'
                                     }, void 0, false, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 536,
+                                        lineNumber: 645,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 527,
+                                lineNumber: 643,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1065,20 +1228,21 @@ function House3DViewer({ house }) {
                                             textAlign: 'center',
                                             padding: '20px 0'
                                         },
-                                        children: "พิมพ์เพื่อค้นหาสินค้าจาก IKEA"
+                                        children: "Search for Poly Haven models (e.g. Sofa, Chair) to add them to your room."
                                     }, void 0, false, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 542,
+                                        lineNumber: 650,
                                         columnNumber: 76
                                     }, this),
                                     searchResults.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
                                                 display: 'flex',
                                                 gap: '12px',
-                                                background: 'rgba(255,255,255,0.05)',
+                                                background: 'rgba(255,255,255,0.03)',
                                                 padding: '8px',
-                                                borderRadius: '8px',
-                                                alignItems: 'center'
+                                                borderRadius: '10px',
+                                                alignItems: 'center',
+                                                border: '1px solid rgba(255,255,255,0.05)'
                                             },
                                             children: [
                                                 item.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1089,22 +1253,22 @@ function House3DViewer({ house }) {
                                                         height: '48px',
                                                         objectFit: 'contain',
                                                         background: 'white',
-                                                        borderRadius: '4px'
+                                                        borderRadius: '6px'
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/House3DViewer.tsx",
-                                                    lineNumber: 546,
+                                                    lineNumber: 654,
                                                     columnNumber: 41
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     style: {
                                                         width: '48px',
                                                         height: '48px',
                                                         background: '#333',
-                                                        borderRadius: '4px'
+                                                        borderRadius: '6px'
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/House3DViewer.tsx",
-                                                    lineNumber: 548,
+                                                    lineNumber: 656,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1117,7 +1281,7 @@ function House3DViewer({ house }) {
                                                             style: {
                                                                 color: 'white',
                                                                 fontSize: '13px',
-                                                                fontWeight: 'bold',
+                                                                fontWeight: '600',
                                                                 whiteSpace: 'nowrap',
                                                                 textOverflow: 'ellipsis',
                                                                 overflow: 'hidden'
@@ -1125,7 +1289,7 @@ function House3DViewer({ house }) {
                                                             children: item.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/House3DViewer.tsx",
-                                                            lineNumber: 551,
+                                                            lineNumber: 659,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1134,111 +1298,113 @@ function House3DViewer({ house }) {
                                                                 fontSize: '11px',
                                                                 whiteSpace: 'nowrap',
                                                                 textOverflow: 'ellipsis',
-                                                                overflow: 'hidden'
+                                                                overflow: 'hidden',
+                                                                marginTop: '2px'
                                                             },
                                                             children: item.type
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/House3DViewer.tsx",
-                                                            lineNumber: 552,
+                                                            lineNumber: 660,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/House3DViewer.tsx",
-                                                    lineNumber: 550,
+                                                    lineNumber: 658,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    onClick: ()=>handleAddItem(item.id, item.name),
+                                                    onClick: ()=>handleAddItem(item.id, item.name, item.modelUrl),
                                                     disabled: loadingModelId === item.id,
                                                     style: {
-                                                        background: loadingModelId === item.id ? '#64748b' : '#10b981',
+                                                        background: loadingModelId === item.id ? 'rgba(255,255,255,0.1)' : '#10b981',
                                                         color: 'white',
                                                         border: 'none',
-                                                        width: '28px',
-                                                        height: '28px',
-                                                        borderRadius: '6px',
+                                                        width: '32px',
+                                                        height: '32px',
+                                                        borderRadius: '8px',
                                                         cursor: 'pointer',
                                                         display: 'flex',
                                                         alignItems: 'center',
                                                         justifyContent: 'center'
                                                     },
                                                     children: loadingModelId === item.id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
-                                                        size: 14,
+                                                        size: 16,
                                                         className: "animate-spin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/House3DViewer.tsx",
-                                                        lineNumber: 559,
+                                                        lineNumber: 663,
                                                         columnNumber: 71
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                                        size: 16
+                                                        size: 18
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/House3DViewer.tsx",
-                                                        lineNumber: 559,
+                                                        lineNumber: 663,
                                                         columnNumber: 120
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/House3DViewer.tsx",
-                                                    lineNumber: 554,
+                                                    lineNumber: 662,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, item.id, true, {
                                             fileName: "[project]/components/House3DViewer.tsx",
-                                            lineNumber: 544,
+                                            lineNumber: 652,
                                             columnNumber: 33
                                         }, this))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 541,
+                                lineNumber: 649,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 525,
+                        lineNumber: 641,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 516,
+                lineNumber: 636,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'absolute',
-                    top: 16,
-                    right: 16,
-                    zIndex: 10,
+                    top: '16px',
+                    right: '16px',
+                    zIndex: 20,
                     display: 'flex',
-                    gap: '8px',
                     flexDirection: 'column',
-                    alignItems: 'flex-end'
+                    alignItems: 'flex-end',
+                    gap: '8px'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: toggleFullscreen,
                         style: {
-                            background: 'rgba(15, 23, 42, 0.8)',
+                            background: 'rgba(15, 23, 42, 0.65)',
                             border: '1px solid rgba(255,255,255,0.1)',
                             color: 'white',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
-                            fontSize: '13px'
+                            backdropFilter: 'blur(12px)',
+                            fontSize: '13px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$maximize$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Maximize$3e$__["Maximize"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 574,
+                                lineNumber: 675,
                                 columnNumber: 21
                             }, this),
                             " ",
@@ -1246,371 +1412,724 @@ function House3DViewer({ house }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 570,
+                        lineNumber: 674,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setMode((m)=>m === 'orbit' ? 'top' : 'orbit'),
+                        onClick: ()=>{
+                            if (mode === 'orbit') setMode('top');
+                            else if (mode === 'top') setMode('person');
+                            else setMode('orbit');
+                        },
                         style: {
-                            background: 'rgba(15, 23, 42, 0.8)',
+                            background: 'rgba(15, 23, 42, 0.65)',
                             border: '1px solid rgba(255,255,255,0.1)',
                             color: 'white',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
-                            fontSize: '13px'
+                            backdropFilter: 'blur(12px)',
+                            fontSize: '13px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             mode === 'orbit' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 580,
+                                lineNumber: 678,
                                 columnNumber: 41
+                            }, this) : mode === 'top' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
+                                size: 16
+                            }, void 0, false, {
+                                fileName: "[project]/components/House3DViewer.tsx",
+                                lineNumber: 678,
+                                columnNumber: 78
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$maximize$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Maximize$3e$__["Maximize"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 580,
-                                columnNumber: 61
+                                lineNumber: 678,
+                                columnNumber: 98
                             }, this),
-                            mode === 'orbit' ? 'Blueprint View' : '3D Orbit View'
+                            mode === 'orbit' ? 'Blueprint View' : mode === 'top' ? 'First Person View' : '3D Orbit View'
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 576,
+                        lineNumber: 677,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setIsNight(!isNight),
                         style: {
-                            background: 'rgba(15, 23, 42, 0.8)',
+                            background: 'rgba(15, 23, 42, 0.65)',
                             border: '1px solid rgba(255,255,255,0.1)',
                             color: 'white',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
-                            fontSize: '13px'
+                            backdropFilter: 'blur(12px)',
+                            fontSize: '13px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             isNight ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 588,
+                                lineNumber: 682,
                                 columnNumber: 32
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 588,
+                                lineNumber: 682,
                                 columnNumber: 52
                             }, this),
                             isNight ? 'Day Mode' : 'Night Mode'
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 584,
+                        lineNumber: 681,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: takeSnapshot,
                         style: {
-                            background: 'rgba(56, 189, 248, 0.9)',
-                            border: 'none',
+                            background: 'rgba(56, 189, 248, 0.8)',
+                            border: '1px solid rgba(255,255,255,0.1)',
                             color: '#0f172a',
                             fontWeight: 'bold',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
+                            backdropFilter: 'blur(12px)',
                             fontSize: '13px',
-                            marginTop: '8px'
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__["Camera"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 596,
+                                lineNumber: 686,
                                 columnNumber: 21
                             }, this),
                             " Snapshot"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 592,
+                        lineNumber: 685,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setShowMaterialPanel(!showMaterialPanel),
                         style: {
-                            background: showMaterialPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.8)',
+                            background: 'rgba(16, 185, 129, 0.8)',
                             border: '1px solid rgba(255,255,255,0.1)',
                             color: 'white',
+                            fontWeight: 'bold',
                             padding: '8px 12px',
-                            borderRadius: '8px',
+                            borderRadius: '12px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            backdropFilter: 'blur(4px)',
+                            backdropFilter: 'blur(12px)',
                             fontSize: '13px',
-                            marginTop: '4px'
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$paint$2d$bucket$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PaintBucket$3e$__["PaintBucket"], {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 602,
+                                lineNumber: 689,
                                 columnNumber: 21
                             }, this),
                             " Materials"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 598,
+                        lineNumber: 688,
                         columnNumber: 17
                     }, this),
                     showMaterialPanel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            background: 'rgba(15, 23, 42, 0.95)',
-                            border: '1px solid rgba(255,255,255,0.15)',
-                            borderRadius: '12px',
+                            background: 'rgba(15, 23, 42, 0.75)',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            borderRadius: '16px',
                             padding: '16px',
                             width: '280px',
-                            backdropFilter: 'blur(10px)',
-                            marginTop: '8px',
+                            backdropFilter: 'blur(16px)',
                             display: 'flex',
                             flexDirection: 'column',
                             gap: '16px',
+                            boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
                             maxHeight: '400px',
                             overflowY: 'auto'
                         },
+                        children: !selectedElement ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                color: '#94a3b8',
+                                fontSize: '13px',
+                                textAlign: 'center',
+                                padding: '20px 0'
+                            },
+                            children: "Please click on a wall or floor in the 3D view to change its material."
+                        }, void 0, false, {
+                            fileName: "[project]/components/House3DViewer.tsx",
+                            lineNumber: 696,
+                            columnNumber: 29
+                        }, this) : selectedElement.type === 'wall' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    style: {
+                                        color: 'white',
+                                        margin: '0 0 12px 0',
+                                        fontSize: '14px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '6px'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$paint$2d$bucket$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PaintBucket$3e$__["PaintBucket"], {
+                                            size: 14
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 701,
+                                            columnNumber: 155
+                                        }, this),
+                                        " Wall Color"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 701,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        marginBottom: '12px'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "color",
+                                            value: wallColorsMap[selectedElement.id] || '#f8f9fa',
+                                            onChange: (e)=>setWallColorsMap((prev)=>({
+                                                        ...prev,
+                                                        [selectedElement.id]: e.target.value
+                                                    })),
+                                            style: {
+                                                width: '32px',
+                                                height: '32px',
+                                                padding: '0',
+                                                border: 'none',
+                                                borderRadius: '6px',
+                                                cursor: 'pointer',
+                                                background: 'transparent'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 703,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "text",
+                                            value: wallColorsMap[selectedElement.id] || '#f8f9fa',
+                                            onChange: (e)=>setWallColorsMap((prev)=>({
+                                                        ...prev,
+                                                        [selectedElement.id]: e.target.value
+                                                    })),
+                                            placeholder: "#FFFFFF",
+                                            style: {
+                                                flex: 1,
+                                                padding: '6px 10px',
+                                                borderRadius: '6px',
+                                                border: '1px solid rgba(255,255,255,0.2)',
+                                                background: 'rgba(0,0,0,0.3)',
+                                                color: 'white',
+                                                outline: 'none',
+                                                fontSize: '13px'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 704,
+                                            columnNumber: 37
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 702,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        display: 'grid',
+                                        gridTemplateColumns: 'repeat(6, 1fr)',
+                                        gap: '6px'
+                                    },
+                                    children: wallColors.map((color)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            onClick: ()=>setWallColorsMap((prev)=>({
+                                                        ...prev,
+                                                        [selectedElement.id]: color
+                                                    })),
+                                            style: {
+                                                width: '100%',
+                                                aspectRatio: '1/1',
+                                                backgroundColor: color,
+                                                borderRadius: '6px',
+                                                cursor: 'pointer',
+                                                border: (wallColorsMap[selectedElement.id] || '#f8f9fa') === color ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
+                                            }
+                                        }, color, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 708,
+                                            columnNumber: 41
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 706,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>{
+                                        const currentColor = wallColorsMap[selectedElement.id] || '#f8f9fa';
+                                        const newMap = {
+                                            ...wallColorsMap
+                                        };
+                                        walls.forEach((w)=>newMap[w.id] = currentColor);
+                                        setWallColorsMap(newMap);
+                                    },
+                                    style: {
+                                        marginTop: '16px',
+                                        width: '100%',
+                                        background: 'rgba(56, 189, 248, 0.1)',
+                                        color: '#38bdf8',
+                                        border: '1px solid rgba(56, 189, 248, 0.3)',
+                                        padding: '8px',
+                                        borderRadius: '8px',
+                                        cursor: 'pointer',
+                                        fontSize: '13px',
+                                        fontWeight: '500',
+                                        transition: 'all 0.2s'
+                                    },
+                                    onMouseOver: (e)=>e.currentTarget.style.background = 'rgba(56, 189, 248, 0.2)',
+                                    onMouseOut: (e)=>e.currentTarget.style.background = 'rgba(56, 189, 248, 0.1)',
+                                    children: "Apply to All Walls"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 711,
+                                    columnNumber: 33
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/House3DViewer.tsx",
+                            lineNumber: 700,
+                            columnNumber: 29
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    style: {
+                                        color: 'white',
+                                        margin: '0 0 12px 0',
+                                        fontSize: '14px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '6px'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
+                                            size: 14
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 727,
+                                            columnNumber: 155
+                                        }, this),
+                                        " Floor Texture"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 727,
+                                    columnNumber: 33
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        display: 'grid',
+                                        gridTemplateColumns: 'repeat(3, 1fr)',
+                                        gap: '8px'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            onClick: ()=>setFloorTexturesMap((prev)=>({
+                                                        ...prev,
+                                                        [selectedElement.id]: null
+                                                    })),
+                                            style: {
+                                                background: 'rgba(255,255,255,0.05)',
+                                                color: '#94a3b8',
+                                                fontSize: '12px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                height: '60px',
+                                                borderRadius: '8px',
+                                                cursor: 'pointer',
+                                                border: floorTexturesMap[selectedElement.id] === undefined || floorTexturesMap[selectedElement.id] === null ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
+                                            },
+                                            children: "Default"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 729,
+                                            columnNumber: 37
+                                        }, this),
+                                        floorTextures.map((tex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                onClick: ()=>setFloorTexturesMap((prev)=>({
+                                                            ...prev,
+                                                            [selectedElement.id]: tex.url
+                                                        })),
+                                                style: {
+                                                    height: '60px',
+                                                    borderRadius: '8px',
+                                                    cursor: 'pointer',
+                                                    backgroundImage: `url(${tex.url})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                    border: floorTexturesMap[selectedElement.id] === tex.url ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
+                                                },
+                                                title: tex.name
+                                            }, tex.id, false, {
+                                                fileName: "[project]/components/House3DViewer.tsx",
+                                                lineNumber: 733,
+                                                columnNumber: 41
+                                            }, this))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 728,
+                                    columnNumber: 33
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/House3DViewer.tsx",
+                            lineNumber: 726,
+                            columnNumber: 29
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/House3DViewer.tsx",
+                        lineNumber: 694,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/House3DViewer.tsx",
+                lineNumber: 673,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    position: 'absolute',
+                    top: '16px',
+                    right: selectedItemId ? '250px' : '-350px',
+                    zIndex: 10,
+                    transition: 'right 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    width: '280px'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        background: 'rgba(15, 23, 42, 0.75)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        borderRadius: '16px',
+                        padding: '20px',
+                        width: '100%',
+                        backdropFilter: 'blur(16px)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '20px',
+                        boxShadow: '0 10px 40px rgba(0,0,0,0.3)'
+                    },
+                    children: selectedItem ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                         style: {
                                             color: 'white',
-                                            margin: '0 0 8px 0',
-                                            fontSize: '14px',
+                                            margin: '0 0 4px 0',
+                                            fontSize: '16px',
+                                            fontWeight: '600',
+                                            whiteSpace: 'nowrap',
+                                            textOverflow: 'ellipsis',
+                                            overflow: 'hidden'
+                                        },
+                                        children: selectedItem.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/House3DViewer.tsx",
+                                        lineNumber: 748,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            color: '#94a3b8',
+                                            fontSize: '13px'
+                                        },
+                                        children: "Selected Item"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/House3DViewer.tsx",
+                                        lineNumber: 749,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/House3DViewer.tsx",
+                                lineNumber: 747,
+                                columnNumber: 29
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: '1fr 1fr',
+                                    gap: '8px'
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        style: {
+                                            background: 'rgba(59, 130, 246, 0.2)',
+                                            color: '#60a5fa',
+                                            border: '1px solid #3b82f6',
+                                            padding: '10px',
+                                            borderRadius: '10px',
+                                            cursor: 'default',
                                             display: 'flex',
+                                            flexDirection: 'column',
                                             alignItems: 'center',
                                             gap: '6px'
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$paint$2d$bucket$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PaintBucket$3e$__["PaintBucket"], {
-                                                size: 14
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$move$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Move$3e$__["Move"], {
+                                                size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 609,
-                                                columnNumber: 150
-                                            }, this),
-                                            " Wall Colors"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 609,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        style: {
-                                            display: 'grid',
-                                            gridTemplateColumns: 'repeat(6, 1fr)',
-                                            gap: '6px',
-                                            marginBottom: '12px'
-                                        },
-                                        children: wallColors.map((color)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                onClick: ()=>setWallColor(color),
-                                                style: {
-                                                    width: '100%',
-                                                    aspectRatio: '1/1',
-                                                    backgroundColor: color,
-                                                    borderRadius: '6px',
-                                                    cursor: 'pointer',
-                                                    border: wallColor === color ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)',
-                                                    transition: 'all 0.2s'
-                                                },
-                                                title: color
-                                            }, color, false, {
-                                                fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 612,
+                                                lineNumber: 756,
                                                 columnNumber: 37
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 610,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        style: {
-                                            display: 'flex',
-                                            gap: '8px',
-                                            alignItems: 'center'
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "color",
-                                                value: wallColor,
-                                                onChange: (e)=>setWallColor(e.target.value),
-                                                style: {
-                                                    width: '40px',
-                                                    height: '40px',
-                                                    padding: 0,
-                                                    border: '1px solid rgba(255,255,255,0.2)',
-                                                    borderRadius: '6px',
-                                                    cursor: 'pointer',
-                                                    background: 'transparent'
-                                                },
-                                                title: "Choose Custom Color (Eyedropper)"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 621,
-                                                columnNumber: 33
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "text",
-                                                value: wallColor,
-                                                onChange: (e)=>setWallColor(e.target.value),
-                                                placeholder: "#FFFFFF",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 style: {
-                                                    flex: 1,
-                                                    padding: '8px',
-                                                    borderRadius: '6px',
-                                                    border: '1px solid rgba(255,255,255,0.2)',
-                                                    background: 'rgba(0,0,0,0.3)',
-                                                    color: 'white',
-                                                    outline: 'none',
-                                                    fontSize: '13px',
-                                                    textTransform: 'uppercase'
-                                                }
+                                                    fontSize: '12px'
+                                                },
+                                                children: "Drag to Move"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 628,
-                                                columnNumber: 33
+                                                lineNumber: 757,
+                                                columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 620,
-                                        columnNumber: 29
+                                        lineNumber: 753,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>{
+                                            setPlacedItems((items)=>items.map((i)=>{
+                                                    if (i.id === selectedItemId) {
+                                                        return {
+                                                            ...i,
+                                                            rotation: [
+                                                                i.rotation[0],
+                                                                i.rotation[1] + Math.PI / 2,
+                                                                i.rotation[2]
+                                                            ]
+                                                        };
+                                                    }
+                                                    return i;
+                                                }));
+                                        },
+                                        style: {
+                                            background: 'rgba(255,255,255,0.05)',
+                                            color: 'white',
+                                            border: '1px solid rgba(255,255,255,0.1)',
+                                            padding: '10px',
+                                            borderRadius: '10px',
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            transition: 'all 0.2s'
+                                        },
+                                        onMouseOver: (e)=>e.currentTarget.style.background = 'rgba(255,255,255,0.1)',
+                                        onMouseOut: (e)=>e.currentTarget.style.background = 'rgba(255,255,255,0.05)',
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
+                                                size: 20
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/House3DViewer.tsx",
+                                                lineNumber: 772,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                style: {
+                                                    fontSize: '12px'
+                                                },
+                                                children: "Rotate 90°"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/House3DViewer.tsx",
+                                                lineNumber: 773,
+                                                columnNumber: 37
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/House3DViewer.tsx",
+                                        lineNumber: 759,
+                                        columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 608,
-                                columnNumber: 25
+                                lineNumber: 752,
+                                columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    height: '1px',
+                                    background: 'rgba(255,255,255,0.1)',
+                                    width: '100%'
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/components/House3DViewer.tsx",
+                                lineNumber: 777,
+                                columnNumber: 29
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '8px'
+                                },
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>{
+                                            setSelectedItemId(null);
+                                            setShowSearchPanel(true);
+                                        },
                                         style: {
+                                            background: '#10b981',
                                             color: 'white',
-                                            margin: '0 0 8px 0',
-                                            fontSize: '14px',
+                                            padding: '12px',
+                                            borderRadius: '10px',
+                                            cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
-                                            gap: '6px'
+                                            justifyContent: 'center',
+                                            gap: '8px',
+                                            fontSize: '14px',
+                                            fontWeight: 'bold',
+                                            border: 'none',
+                                            transition: 'all 0.2s'
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"], {
-                                                size: 14
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                                                size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 639,
-                                                columnNumber: 150
+                                                lineNumber: 787,
+                                                columnNumber: 37
                                             }, this),
-                                            " Floor Textures"
+                                            " Save & Add New"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 639,
-                                        columnNumber: 29
+                                        lineNumber: 780,
+                                        columnNumber: 33
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>{
+                                            setPlacedItems((items)=>items.filter((i)=>i.id !== selectedItemId));
+                                            setSelectedItemId(null);
+                                        },
                                         style: {
-                                            display: 'grid',
-                                            gridTemplateColumns: 'repeat(3, 1fr)',
-                                            gap: '8px'
+                                            background: 'rgba(239, 68, 68, 0.1)',
+                                            border: '1px solid rgba(239, 68, 68, 0.3)',
+                                            color: '#fca5a5',
+                                            padding: '12px',
+                                            borderRadius: '10px',
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            gap: '8px',
+                                            fontSize: '14px',
+                                            fontWeight: 'bold',
+                                            transition: 'all 0.2s'
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                onClick: ()=>setFloorTextureUrl(null),
-                                                style: {
-                                                    background: '#333',
-                                                    color: '#94a3b8',
-                                                    fontSize: '11px',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    height: '60px',
-                                                    borderRadius: '8px',
-                                                    cursor: 'pointer',
-                                                    border: floorTextureUrl === null ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
-                                                },
-                                                children: "Default"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/components/House3DViewer.tsx",
-                                                lineNumber: 641,
-                                                columnNumber: 33
+                                                lineNumber: 796,
+                                                columnNumber: 37
                                             }, this),
-                                            floorTextures.map((tex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    onClick: ()=>setFloorTextureUrl(tex.url),
-                                                    style: {
-                                                        height: '60px',
-                                                        borderRadius: '8px',
-                                                        cursor: 'pointer',
-                                                        backgroundImage: `url(${tex.url})`,
-                                                        backgroundSize: 'cover',
-                                                        backgroundPosition: 'center',
-                                                        border: floorTextureUrl === tex.url ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
-                                                    },
-                                                    title: tex.name
-                                                }, tex.id, false, {
-                                                    fileName: "[project]/components/House3DViewer.tsx",
-                                                    lineNumber: 648,
-                                                    columnNumber: 37
-                                                }, this))
+                                            " Remove Item"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 640,
-                                        columnNumber: 29
+                                        lineNumber: 789,
+                                        columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 638,
-                                columnNumber: 25
+                                lineNumber: 779,
+                                columnNumber: 29
                             }, this)
                         ]
-                    }, void 0, true, {
+                    }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            color: '#94a3b8',
+                            fontSize: '13px',
+                            textAlign: 'center'
+                        },
+                        children: "No item selected"
+                    }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 607,
-                        columnNumber: 21
+                        lineNumber: 801,
+                        columnNumber: 25
                     }, this)
-                ]
-            }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "[project]/components/House3DViewer.tsx",
+                    lineNumber: 744,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 569,
+                lineNumber: 743,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$fiber$2f$dist$2f$react$2d$three$2d$fiber$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Canvas"], {
                 ref: canvasRef,
+                onPointerMissed: ()=>{
+                    if (Date.now() - dragEndTimeRef.current < 200) return;
+                    setSelectedItemId(null);
+                    setSelectedElement(null);
+                },
                 shadows: true,
+                dpr: [
+                    1,
+                    1.5
+                ],
                 gl: {
                     antialias: true,
                     preserveDrawingBuffer: true
@@ -1621,7 +2140,7 @@ function House3DViewer({ house }) {
                         bounds: bounds
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 666,
+                        lineNumber: 807,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("color", {
@@ -1631,14 +2150,14 @@ function House3DViewer({ house }) {
                         ]
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 669,
+                        lineNumber: 810,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Environment$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Environment"], {
                         preset: isNight ? "night" : "city"
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 670,
+                        lineNumber: 811,
                         columnNumber: 17
                     }, this),
                     isNight ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1647,7 +2166,7 @@ function House3DViewer({ house }) {
                                 intensity: 0.2
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 675,
+                                lineNumber: 816,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("pointLight", {
@@ -1662,7 +2181,7 @@ function House3DViewer({ house }) {
                                 castShadow: true
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 677,
+                                lineNumber: 818,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("directionalLight", {
@@ -1676,7 +2195,7 @@ function House3DViewer({ house }) {
                                 castShadow: true
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 678,
+                                lineNumber: 819,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -1686,7 +2205,7 @@ function House3DViewer({ house }) {
                                 intensity: 0.5
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 682,
+                                lineNumber: 823,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("directionalLight", {
@@ -1704,7 +2223,7 @@ function House3DViewer({ house }) {
                                 "shadow-bias": -0.0001
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 683,
+                                lineNumber: 824,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("directionalLight", {
@@ -1716,7 +2235,7 @@ function House3DViewer({ house }) {
                                 intensity: 0.5
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 684,
+                                lineNumber: 825,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -1727,66 +2246,123 @@ function House3DViewer({ house }) {
                             0,
                             -bounds.centerZ
                         ],
+                        onClick: ()=>{
+                            if (Date.now() - dragEndTimeRef.current < 200) return;
+                            setSelectedItemId(null);
+                            setSelectedElement(null);
+                        },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(BuildingFloor, {
                                 house: house,
                                 bounds: bounds,
-                                floorTextureUrl: floorTextureUrl
+                                floorTextureUrl: floorTexturesMap['building-floor'] || null,
+                                isSelected: selectedElement?.type === 'floor' && selectedElement.id === 'building-floor',
+                                onSelect: ()=>{
+                                    if (Date.now() - dragEndTimeRef.current < 200) return;
+                                    setSelectedElement({
+                                        type: 'floor',
+                                        id: 'building-floor'
+                                    });
+                                    setShowMaterialPanel(true);
+                                    setSelectedItemId(null);
+                                }
                             }, void 0, false, {
                                 fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 690,
+                                lineNumber: 832,
                                 columnNumber: 21
                             }, this),
-                            validRooms.length > 0 && validRooms.map((r)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(RoomFloor, {
-                                    room: r,
-                                    floorTextureUrl: floorTextureUrl
-                                }, r.id, false, {
+                            validRooms.map((room, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(RoomFloor, {
+                                    room: room,
+                                    floorTextureUrl: floorTexturesMap[room.id] || null,
+                                    isSelected: selectedElement?.type === 'floor' && selectedElement.id === room.id,
+                                    onSelect: ()=>{
+                                        if (Date.now() - dragEndTimeRef.current < 200) return;
+                                        setSelectedElement({
+                                            type: 'floor',
+                                            id: room.id
+                                        });
+                                        setShowMaterialPanel(true);
+                                        setSelectedItemId(null);
+                                    }
+                                }, `room-${i}`, false, {
                                     fileName: "[project]/components/House3DViewer.tsx",
-                                    lineNumber: 691,
-                                    columnNumber: 67
+                                    lineNumber: 842,
+                                    columnNumber: 25
                                 }, this)),
-                            walls.map((wall, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Wall, {
+                            walls.map((wall, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Wall, {
                                     wall: wall,
                                     doors: doors,
                                     windows: windows,
                                     isNight: isNight,
-                                    wallColor: wallColor
-                                }, wall.id || `w-${idx}`, false, {
+                                    wallColor: wallColorsMap[wall.id] || '#f8f9fa',
+                                    isSelected: selectedElement?.type === 'wall' && selectedElement.id === wall.id,
+                                    onSelect: ()=>{
+                                        if (Date.now() - dragEndTimeRef.current < 200) return;
+                                        setSelectedElement({
+                                            type: 'wall',
+                                            id: wall.id
+                                        });
+                                        setShowMaterialPanel(true);
+                                        setSelectedItemId(null);
+                                    }
+                                }, `wall-${i}`, false, {
                                     fileName: "[project]/components/House3DViewer.tsx",
-                                    lineNumber: 692,
-                                    columnNumber: 47
+                                    lineNumber: 853,
+                                    columnNumber: 25
                                 }, this)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
-                                fallback: null,
-                                children: placedItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FurnitureItem, {
-                                        item: item,
-                                        onUpdate: (id, pos)=>{
-                                            setPlacedItems((items)=>items.map((i)=>i.id === id ? {
-                                                        ...i,
-                                                        position: [
-                                                            pos.x,
-                                                            pos.y,
-                                                            pos.z
-                                                        ]
-                                                    } : i));
-                                        },
-                                        onRemove: (id)=>{
-                                            setPlacedItems((items)=>items.filter((i)=>i.id !== id));
-                                        }
-                                    }, item.id, false, {
+                            placedItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FurnitureErrorBoundary, {
+                                    position: item.position,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
+                                        fallback: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FurnitureLoading, {
+                                            position: item.position
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 868,
+                                            columnNumber: 49
+                                        }, void 0),
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FurnitureItem, {
+                                            item: item,
+                                            isSelected: selectedItemId === item.id,
+                                            transformMode: transformMode,
+                                            onSelect: ()=>{
+                                                setSelectedItemId(item.id);
+                                                setSelectedElement(null);
+                                            },
+                                            setDragContext: setDragContext,
+                                            onUpdate: (id, pos, rot)=>{
+                                                setPlacedItems((items)=>items.map((i)=>i.id === id ? {
+                                                            ...i,
+                                                            position: [
+                                                                pos.x,
+                                                                pos.y,
+                                                                pos.z
+                                                            ],
+                                                            rotation: rot ? [
+                                                                rot.x,
+                                                                rot.y,
+                                                                rot.z
+                                                            ] : i.rotation
+                                                        } : i));
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/House3DViewer.tsx",
+                                            lineNumber: 869,
+                                            columnNumber: 33
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/components/House3DViewer.tsx",
-                                        lineNumber: 697,
+                                        lineNumber: 868,
                                         columnNumber: 29
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/components/House3DViewer.tsx",
-                                lineNumber: 695,
-                                columnNumber: 21
-                            }, this)
+                                    }, this)
+                                }, item.id, false, {
+                                    fileName: "[project]/components/House3DViewer.tsx",
+                                    lineNumber: 867,
+                                    columnNumber: 25
+                                }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 689,
+                        lineNumber: 830,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Grid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Grid"], {
@@ -1809,29 +2385,48 @@ function House3DViewer({ house }) {
                         infiniteGrid: true
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 712,
+                        lineNumber: 885,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DragController, {
+                        dragContext: dragContext,
+                        setDragContext: setDragContext,
+                        onUpdate: (id, pos)=>{
+                            setPlacedItems((items)=>items.map((i)=>i.id === id ? {
+                                        ...i,
+                                        position: [
+                                            pos.x,
+                                            pos.y,
+                                            pos.z
+                                        ]
+                                    } : i));
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/components/House3DViewer.tsx",
+                        lineNumber: 887,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$OrbitControls$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["OrbitControls"], {
                         makeDefault: true,
                         enablePan: true,
                         enableZoom: true,
-                        enableRotate: true
+                        enableRotate: true,
+                        enabled: !dragContext
                     }, void 0, false, {
                         fileName: "[project]/components/House3DViewer.tsx",
-                        lineNumber: 714,
+                        lineNumber: 895,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/House3DViewer.tsx",
-                lineNumber: 665,
+                lineNumber: 806,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/House3DViewer.tsx",
-        lineNumber: 513,
+        lineNumber: 633,
         columnNumber: 9
     }, this);
 }

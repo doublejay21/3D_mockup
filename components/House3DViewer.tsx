@@ -3,8 +3,8 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Grid, Environment, Edges, Html, TransformControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
-import { useMemo, useState, useEffect, useRef, Suspense } from "react";
-import { Camera, Sun, Moon, Maximize, Map, PaintBucket, Layers, Search, Plus, Trash2, Sofa, Loader2 } from "lucide-react";
+import { useMemo, useState, useEffect, useRef, Suspense, Component, ReactNode } from "react";
+import { Camera, Sun, Moon, Maximize, Map, PaintBucket, Layers, Search, Plus, Trash2, Sofa, Loader2, RotateCcw, Eye, Move } from "lucide-react";
 
 // ======================================================
 // TYPES
@@ -74,7 +74,7 @@ const materials = {
 // COMPONENTS
 // ======================================================
 
-function Wall({ wall, doors, windows, isNight, wallColor }: { wall: WallData, doors: DoorData[], windows: WindowData[], isNight: boolean, wallColor: string }) {
+function Wall({ wall, doors, windows, isNight, wallColor, isSelected, onSelect }: { wall: WallData, doors: DoorData[], windows: WindowData[], isNight: boolean, wallColor: string, isSelected: boolean, onSelect: () => void }) {
     const result = useMemo(() => {
         if (!isValidPoint(wall.start) || !isValidPoint(wall.end)) return null;
         const dx = Number(wall.end.x) - Number(wall.start.x);
@@ -101,11 +101,11 @@ function Wall({ wall, doors, windows, isNight, wallColor }: { wall: WallData, do
     const showLabel = result.length > 0.5;
 
     return (
-        <group position={[result.centerX, 0, result.centerZ]} rotation={[0, -result.angle, 0]}>
+        <group position={[result.centerX, 0, result.centerZ]} rotation={[0, -result.angle, 0]} onClick={(e) => { e.stopPropagation(); onSelect(); }}>
             {/* Main Wall Body */}
             <mesh position={[0, result.height / 2, 0]} castShadow receiveShadow>
                 <boxGeometry args={[result.length, result.height, result.thickness]} />
-                <meshStandardMaterial color={isNight ? "#dcdfe4" : wallColor} roughness={0.8} metalness={0.1} />
+                <meshStandardMaterial color={isNight ? "#dcdfe4" : wallColor} roughness={0.8} metalness={0.1} emissive={isSelected ? "#38bdf8" : "#000000"} emissiveIntensity={isSelected ? 0.3 : 0} />
                 <Edges scale={1.001} threshold={15} color={isNight ? "#9ca3af" : "#d1d5db"} />
             </mesh>
 
@@ -161,7 +161,7 @@ function Wall({ wall, doors, windows, isNight, wallColor }: { wall: WallData, do
     );
 }
 
-function RoomFloor({ room, floorTextureUrl }: { room: RoomData, floorTextureUrl: string | null }) {
+function RoomFloor({ room, floorTextureUrl, isSelected, onSelect }: { room: RoomData, floorTextureUrl: string | null, isSelected: boolean, onSelect: () => void }) {
     const { geometry, labelPos } = useMemo(() => {
         const polygon = Array.isArray(room.polygon) ? room.polygon.filter(isValidPoint) : [];
         if (polygon.length < 3) return { geometry: null, labelPos: [0,0,0] as [number,number,number] };
@@ -193,34 +193,35 @@ function RoomFloor({ room, floorTextureUrl }: { room: RoomData, floorTextureUrl:
         }
         const loader = new THREE.TextureLoader();
         loader.setCrossOrigin('anonymous');
-        loader.load(floorTextureUrl, (tex) => {
-            tex.wrapS = THREE.RepeatWrapping;
-            tex.wrapT = THREE.RepeatWrapping;
-            tex.repeat.set(2, 2);
-            setLoadedTexture(tex);
-        });
+        loader.load(
+            floorTextureUrl, 
+            (tex) => {
+                tex.wrapS = THREE.RepeatWrapping;
+                tex.wrapT = THREE.RepeatWrapping;
+                tex.repeat.set(2, 2);
+                tex.colorSpace = THREE.SRGBColorSpace;
+                setLoadedTexture(tex);
+            },
+            undefined,
+            (err) => console.error("Error loading floor texture:", err)
+        );
     }, [floorTextureUrl]);
-
-    const material = useMemo(() => {
-        if (loadedTexture) {
-            return new THREE.MeshStandardMaterial({
-                map: loadedTexture,
-                roughness: 0.7,
-                metalness: 0
-            });
-        }
-        return new THREE.MeshStandardMaterial({ 
-            color: getRoomColor(room.name), 
-            roughness: 0.85, 
-            metalness: 0 
-        });
-    }, [room.name, loadedTexture]);
 
     if (!geometry) return null;
 
     return (
-        <group position={[0, -0.02, 0]}>
-            <mesh geometry={geometry} rotation={[-Math.PI / 2, 0, 0]} receiveShadow material={material} />
+        <group position={[0, -0.02, 0]} onClick={(e) => { e.stopPropagation(); onSelect(); }}>
+            <mesh geometry={geometry} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+                <meshStandardMaterial 
+                    key={loadedTexture ? loadedTexture.uuid : 'none'}
+                    map={loadedTexture || undefined} 
+                    color={loadedTexture ? "#ffffff" : getRoomColor(room.name)} 
+                    roughness={0.8} 
+                    metalness={0.1} 
+                    emissive={isSelected ? "#38bdf8" : "#000000"} 
+                    emissiveIntensity={isSelected ? 0.3 : 0}
+                />
+            </mesh>
             {room.name && (
                 <Html position={labelPos} center zIndexRange={[50, 0]}>
                     <div style={{
@@ -237,7 +238,7 @@ function RoomFloor({ room, floorTextureUrl }: { room: RoomData, floorTextureUrl:
     );
 }
 
-function BuildingFloor({ house, bounds, floorTextureUrl }: { house: HouseData, bounds: any, floorTextureUrl: string | null }) {
+function BuildingFloor({ house, bounds, floorTextureUrl, isSelected, onSelect }: { house: HouseData, bounds: any, floorTextureUrl: string | null, isSelected: boolean, onSelect: () => void }) {
     let width = safeNumber(house.building?.width, 0);
     let depth = safeNumber(house.building?.depth, 0);
     let posX = width / 2;
@@ -254,19 +255,35 @@ function BuildingFloor({ house, bounds, floorTextureUrl }: { house: HouseData, b
         }
         const loader = new THREE.TextureLoader();
         loader.setCrossOrigin('anonymous');
-        loader.load(floorTextureUrl, (tex) => {
-            tex.wrapS = THREE.RepeatWrapping;
-            tex.wrapT = THREE.RepeatWrapping;
-            tex.repeat.set(width / 5, depth / 5); 
-            setLoadedTexture(tex);
-        });
+        loader.load(
+            floorTextureUrl, 
+            (tex) => {
+                tex.wrapS = THREE.RepeatWrapping;
+                tex.wrapT = THREE.RepeatWrapping;
+                tex.repeat.set(width / 2, depth / 2);
+                tex.colorSpace = THREE.SRGBColorSpace;
+                setLoadedTexture(tex);
+            },
+            undefined,
+            (err) => console.error("Error loading building floor texture:", err)
+        );
     }, [floorTextureUrl, width, depth]);
 
     return (
-        <mesh position={[posX, -0.03, posZ]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-            <planeGeometry args={[width, depth]} />
-            <meshStandardMaterial map={loadedTexture} color={loadedTexture ? "#ffffff" : "#cbd5e1"} roughness={0.9} metalness={0} />
-        </mesh>
+        <group position={[posX, -0.04, posZ]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow onClick={(e) => { e.stopPropagation(); onSelect(); }}>
+                <planeGeometry args={[width, depth]} />
+                <meshStandardMaterial 
+                    key={loadedTexture ? loadedTexture.uuid : 'none'}
+                    map={loadedTexture || undefined} 
+                    color={loadedTexture ? "#ffffff" : materials.floorFallback.color} 
+                    roughness={0.9} 
+                    metalness={0} 
+                    emissive={isSelected ? "#38bdf8" : "#000000"} 
+                    emissiveIntensity={isSelected ? 0.3 : 0}
+                />
+            </mesh>
+        </group>
     );
 }
 
@@ -290,7 +307,7 @@ function getHouseBounds(house: HouseData) {
 // ======================================================
 // CAMERA CONTROLLER
 // ======================================================
-function CameraController({ mode, bounds }: { mode: 'orbit' | 'top', bounds: any }) {
+function CameraController({ mode, bounds }: { mode: 'orbit' | 'top' | 'person', bounds: any }) {
     const { camera, controls } = useThree();
     
     useEffect(() => {
@@ -302,6 +319,12 @@ function CameraController({ mode, bounds }: { mode: 'orbit' | 'top', bounds: any
             camera.position.set(0, maxD * 1.5, 0);
             ctrl.target.set(0, 0, 0);
             ctrl.maxPolarAngle = 0; // Lock to top down
+            ctrl.minPolarAngle = 0;
+            ctrl.update();
+        } else if (mode === 'person') {
+            camera.position.set(0, 1.6, 2); // 1.6m eye level
+            ctrl.target.set(0, 1.6, 0);
+            ctrl.maxPolarAngle = Math.PI; // Full look around
             ctrl.minPolarAngle = 0;
             ctrl.update();
         } else {
@@ -319,49 +342,152 @@ function CameraController({ mode, bounds }: { mode: 'orbit' | 'top', bounds: any
 // ======================================================
 // 3D FURNITURE PLACEMENT COMPONENT
 // ======================================================
-function FurnitureItem({ item, onUpdate, onRemove }: { item: PlacedItem, onUpdate: (id: string, pos: any) => void, onRemove: (id: string) => void }) {
+function FurnitureItem({ item, isSelected, transformMode, onSelect, onUpdate, setDragContext }: { item: PlacedItem, isSelected: boolean, transformMode: 'translate' | 'rotate', onSelect: () => void, onUpdate: (id: string, pos: any, rot: any) => void, setDragContext?: any }) {
     const { scene } = useGLTF(item.modelUrl);
-    const clonedScene = useMemo(() => scene.clone(), [scene]);
+    
+    // Process the scene once to center it and place it on the floor
+    const processedScene = useMemo(() => {
+        const c = scene.clone();
+        
+        // Calculate bounding box of the original model
+        const box = new THREE.Box3().setFromObject(c);
+        const center = box.getCenter(new THREE.Vector3());
+        
+        // Offset the original scene so its bottom is at Y=0 and it is centered on X/Z
+        c.position.x = -center.x;
+        c.position.y = -box.min.y;
+        c.position.z = -center.z;
+        
+        // Create a wrapper group. The TransformControls will move this group.
+        const wrapper = new THREE.Group();
+        wrapper.add(c);
+        return wrapper;
+    }, [scene]);
+
+    useEffect(() => {
+        processedScene.traverse((child) => {
+            if ((child as THREE.Mesh).isMesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+            }
+        });
+    }, [processedScene]);
 
     return (
-        <TransformControls 
-            mode="translate" 
-            position={item.position}
-            onMouseUp={(e: any) => {
-                if (e && e.target && e.target.object) {
-                    onUpdate(item.id, e.target.object.position);
+        <group 
+            onClick={(e) => { e.stopPropagation(); onSelect(); }}
+            onPointerDown={(e) => {
+                if (isSelected && setDragContext) {
+                    e.stopPropagation();
+                    setDragContext({
+                        id: item.id,
+                        offsetX: item.position[0] - e.point.x,
+                        offsetZ: item.position[2] - e.point.z
+                    });
                 }
             }}
         >
-            <group>
-                <primitive object={clonedScene} />
-                <Html position={[0, 1.5, 0]} center>
-                    <button 
-                        onClick={(e) => { e.stopPropagation(); onRemove(item.id); }}
-                        style={{ background: '#ef4444', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
-                    >
-                        <Trash2 size={12} />
-                    </button>
-                </Html>
-            </group>
-        </TransformControls>
+            <primitive object={processedScene} position={item.position} rotation={item.rotation} />
+        </group>
     );
+}
+
+class FurnitureErrorBoundary extends Component<{position: any, children: ReactNode}, {hasError: boolean}> {
+    constructor(props: any) { super(props); this.state = { hasError: false }; }
+    static getDerivedStateFromError() { return { hasError: true }; }
+    render() {
+        if (this.state.hasError) {
+            return (
+                <group position={this.props.position}>
+                    <Html center>
+                        <div style={{ background: 'rgba(220,38,38,0.9)', color: 'white', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', whiteSpace: 'nowrap' }}>
+                            Failed to load model
+                        </div>
+                    </Html>
+                </group>
+            );
+        }
+        return this.props.children;
+    }
+}
+
+function FurnitureLoading({ position }: { position: any }) {
+    return (
+        <group position={position}>
+            <Html center>
+                <div style={{ background: 'rgba(0,0,0,0.8)', color: 'white', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', whiteSpace: 'nowrap' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Loading 3D...
+                    </div>
+                </div>
+            </Html>
+        </group>
+    );
+}
+
+// ======================================================
+// CUSTOM DRAG CONTROLLER
+// ======================================================
+function DragController({ dragContext, setDragContext, onUpdate }: { dragContext: {id: string, offsetX: number, offsetZ: number} | null, setDragContext: any, onUpdate: any }) {
+    const { camera, raycaster, gl } = useThree();
+    const plane = useMemo(() => new THREE.Plane(new THREE.Vector3(0, 1, 0), 0), []);
+
+    useEffect(() => {
+        if (!dragContext) return;
+
+        const handlePointerMove = (e: PointerEvent) => {
+            const rect = gl.domElement.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+            const y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+            
+            const pointerCoords = new THREE.Vector2(x, y);
+            raycaster.setFromCamera(pointerCoords, camera);
+            const target = new THREE.Vector3();
+            raycaster.ray.intersectPlane(plane, target);
+            
+            if (target) {
+                onUpdate(dragContext.id, {
+                    x: target.x + dragContext.offsetX,
+                    y: 0,
+                    z: target.z + dragContext.offsetZ
+                });
+            }
+        };
+
+        const handlePointerUp = () => {
+            if (setDragContext) {
+                setDragContext(null, Date.now()); // Pass timestamp to indicate when drag ended
+            }
+        };
+
+        window.addEventListener('pointermove', handlePointerMove);
+        window.addEventListener('pointerup', handlePointerUp);
+        
+        return () => {
+            window.removeEventListener('pointermove', handlePointerMove);
+            window.removeEventListener('pointerup', handlePointerUp);
+        };
+    }, [dragContext, camera, raycaster, gl, onUpdate, setDragContext, plane]);
+
+    return null;
 }
 
 // ======================================================
 // MAIN VIEWER
 // ======================================================
 export default function House3DViewer({ house }: { house: HouseData }) {
-    const [mode, setMode] = useState<'orbit' | 'top'>('orbit');
+    const [mode, setMode] = useState<'orbit' | 'top' | 'person'>('orbit');
     const [isNight, setIsNight] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     
-    // New states for Materials Phase 1
-    const [wallColor, setWallColor] = useState<string>('#f8f9fa');
-    const [floorTextureUrl, setFloorTextureUrl] = useState<string | null>(null);
+    // New states for Materials Phase 1 (Upgraded)
+    const [wallColorsMap, setWallColorsMap] = useState<Record<string, string>>({});
+    const [floorTexturesMap, setFloorTexturesMap] = useState<Record<string, string | null>>({});
     const [showMaterialPanel, setShowMaterialPanel] = useState(false);
+    const [selectedElement, setSelectedElement] = useState<{type: 'wall'|'floor', id: string} | null>(null);
 
     // New states for IKEA Furniture Phase 3
     const [showSearchPanel, setShowSearchPanel] = useState(false);
@@ -371,13 +497,27 @@ export default function House3DViewer({ house }: { house: HouseData }) {
     const [placedItems, setPlacedItems] = useState<PlacedItem[]>([]);
     const [loadingModelId, setLoadingModelId] = useState<string | null>(null);
 
+    const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+    const [transformMode, setTransformMode] = useState<'translate' | 'rotate'>('translate');
+    const [dragContext, setDragContextState] = useState<{ id: string, offsetX: number, offsetZ: number } | null>(null);
+    const dragEndTimeRef = useRef<number>(0);
+
+    const setDragContext = (ctx: any, endTime?: number) => {
+        if (endTime) dragEndTimeRef.current = endTime;
+        setDragContextState(ctx);
+    };
+    
+    const selectedItem = useMemo(() => placedItems.find(i => i.id === selectedItemId), [placedItems, selectedItemId]);
+
     const floorTextures = [
-        { id: 'wood1', name: 'Light Wood', url: 'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?auto=format&fit=crop&w=800&q=80' },
-        { id: 'wood2', name: 'Dark Wood', url: 'https://images.unsplash.com/photo-1521105955639-6888c3a1da7c?auto=format&fit=crop&w=800&q=80' },
-        { id: 'wood3', name: 'Oak Wood', url: 'https://images.unsplash.com/photo-1581850518616-bcb8077a2336?auto=format&fit=crop&w=800&q=80' },
-        { id: 'tile1', name: 'White Tile', url: 'https://images.unsplash.com/photo-1517409264427-0c7f1a8c2f21?auto=format&fit=crop&w=800&q=80' },
-        { id: 'tile2', name: 'Grey Tile', url: 'https://images.unsplash.com/photo-1620215714442-9989baebff59?auto=format&fit=crop&w=800&q=80' },
-        { id: 'concrete', name: 'Concrete', url: 'https://images.unsplash.com/photo-1516016149174-8394e3305101?auto=format&fit=crop&w=800&q=80' },
+        { id: 'wood1', name: 'Hardwood', url: 'https://threejs.org/examples/textures/hardwood2_diffuse.jpg' },
+        { id: 'wood2', name: 'Dark Wood', url: 'https://threejs.org/examples/textures/crate.gif' },
+        { id: 'grass', name: 'Grass', url: 'https://threejs.org/examples/textures/terrain/grasslight-big.jpg' },
+        { id: 'brick', name: 'Red Brick', url: 'https://threejs.org/examples/textures/brick_diffuse.jpg' },
+        { id: 'concrete', name: 'Concrete', url: 'https://threejs.org/examples/textures/planets/moon_1024.jpg' },
+        { id: 'water', name: 'Water Pool', url: 'https://threejs.org/examples/textures/water.jpg' },
+        { id: 'grid', name: 'Blueprint Grid', url: 'https://threejs.org/examples/textures/uv_grid_opengl.jpg' },
+        { id: 'lava', name: 'Lava', url: 'https://threejs.org/examples/textures/lava/lavatile.jpg' }
     ];
 
     const wallColors = [
@@ -410,75 +550,55 @@ export default function House3DViewer({ house }: { house: HouseData }) {
         try {
             const res = await fetch(`http://localhost:8000/api/search?q=${encodeURIComponent(searchQuery)}&limit=10`);
             const data = await res.json();
-            
-            // Safely extract standard IKEA search format
-            let parsedItems = [];
-            const nodes = data?.searchResultPage?.products?.main?.items;
-            if (Array.isArray(nodes)) {
-                parsedItems = nodes.map(i => ({
-                    id: i?.product?.itemNo || i?.product?.id || Math.random().toString(),
-                    name: i?.product?.name || 'IKEA Item',
-                    type: i?.product?.typeName || '',
-                    image: i?.product?.mainImageUrl || ''
-                })).filter(i => i.id);
-                
-                // Filter to only include items that actually have a 3D model available
-                const validItems = await Promise.all(parsedItems.map(async (item) => {
-                    try {
-                        const r = await fetch(`http://localhost:8000/api/item/${item.id}/3d`);
-                        const d = await r.json();
-                        const str = JSON.stringify(d);
-                        if (str.match(/https:\/\/[^"]+\.glb/i) || str.match(/https:\/\/[^"]+\.gltf/i)) {
-                            return item; // Has 3D model
-                        }
-                    } catch (e) {}
-                    return null;
-                }));
-                
-                let items = validItems.filter(Boolean);
-                setSearchResults(items);
-                
-                if (items.length === 0) {
-                    alert("ไม่พบสินค้าที่มีโมเดล 3D จากคำค้นหานี้ครับ ลองเปลี่ยนคำค้นหาดูนะครับ");
-                }
-            } else {
-                setSearchResults([]);
+            setSearchResults(data || []);
+            if (!data || data.length === 0) {
+                alert("ไม่พบโมเดล 3D จากคำค้นหานี้ครับ ลองเปลี่ยนคำค้นหาเป็นภาษาอังกฤษ เช่น chair, table, sofa ดูนะครับ");
             }
-        } catch (err) {
-            console.error("Search failed", err);
+        } catch (e) {
+            console.error(e);
+            alert("Error searching for items");
         }
         setIsSearching(false);
     };
 
-    const handleAddItem = async (itemCode: string, name: string) => {
+    const handleAddItem = async (itemCode: string, name: string, preFetchedUrl?: string) => {
+        if (loadingModelId) return;
         setLoadingModelId(itemCode);
-        try {
-            const res = await fetch(`http://localhost:8000/api/item/${itemCode}/3d`);
-            const data = await res.json();
-            
-            // Find GLB or GLTF URL in the raw JSON response
-            const str = JSON.stringify(data);
-            const match = str.match(/https:\/\/[^"]+\.glb/i) || str.match(/https:\/\/[^"]+\.gltf/i);
-            
-            if (match && match[0]) {
-                const modelUrl = match[0];
-                const newItem: PlacedItem = {
-                    id: Math.random().toString(36).substring(7),
-                    itemCode,
-                    name,
-                    modelUrl,
-                    position: [0, 0, 0], // Spawn center
-                    rotation: [0, 0, 0]
-                };
-                setPlacedItems(prev => [...prev, newItem]);
-                setShowSearchPanel(false); 
-            } else {
-                alert(`ขออภัยครับ สินค้าชิ้นนี้ (${name}) ไม่มีโมเดล 3D ให้บริการจาก IKEA API`);
+        
+        let urlToLoad = preFetchedUrl;
+        
+        if (!urlToLoad) {
+            try {
+                const res = await fetch(`http://localhost:8000/api/item/${itemCode}/3d`);
+                const data = await res.json();
+                if (data.modelUrl) {
+                    urlToLoad = data.modelUrl;
+                } else {
+                    const str = JSON.stringify(data);
+                    const match = str.match(/(https:\/\/[^"']*\.(glb|gltf))/i);
+                    if (match) urlToLoad = match[1];
+                }
+            } catch (e) {
+                console.error("Failed to load 3D model", e);
+                alert("เกิดข้อผิดพลาดในการดึงไฟล์ 3D จากเซิร์ฟเวอร์");
             }
-        } catch (err) {
-            console.error("Failed to load 3D model", err);
-            alert("เกิดข้อผิดพลาดในการดึงไฟล์ 3D จากเซิร์ฟเวอร์");
         }
+
+        if (urlToLoad) {
+            const newItem: PlacedItem = {
+                id: Math.random().toString(36).substring(7),
+                itemCode,
+                name,
+                modelUrl: urlToLoad,
+                position: [bounds.centerX, 0, bounds.centerZ],
+                rotation: [0, 0, 0]
+            };
+            setPlacedItems(prev => [...prev, newItem]);
+            setShowSearchPanel(false); 
+        } else {
+            alert(`ขออภัยครับ สินค้าชิ้นนี้ (${name}) ไม่มีโมเดล 3D ให้บริการ`);
+        }
+        
         setLoadingModelId(null);
     };
 
@@ -510,53 +630,37 @@ export default function House3DViewer({ house }: { house: HouseData }) {
     };
 
     return (
-        <div ref={containerRef} style={{ width: "100%", height: isFullscreen ? "100vh" : "650px", overflow: "hidden", borderRadius: isFullscreen ? "0px" : "14px", position: "relative", backgroundColor: isNight ? "#0f111a" : "#1c1c28" }}>
+        <div ref={containerRef} style={{ width: "100%", height: isFullscreen ? "100vh" : "650px", overflow: "hidden", borderRadius: isFullscreen ? "0px" : "14px", position: "relative", backgroundColor: isNight ? "#0f111a" : "#1c1c28", fontFamily: 'system-ui, sans-serif' }}>
             
             {/* LEFT FLOATING UI: IKEA SEARCH */}
-            <div style={{ position: 'absolute', top: '16px', left: '16px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                <button 
-                    onClick={() => setShowSearchPanel(!showSearchPanel)}
-                    style={{ background: showSearchPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px' }}
-                >
+            <div style={{ position: 'absolute', top: '16px', left: '16px', zIndex: 20, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px' }}>
+                <button onClick={() => setShowSearchPanel(!showSearchPanel)} style={{ background: showSearchPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.65)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                     <Sofa size={16} /> Add Furniture
                 </button>
-
                 {showSearchPanel && (
-                    <div style={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px', padding: '16px', width: '320px', backdropFilter: 'blur(10px)', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '12px', maxHeight: '450px' }}>
-                        <h4 style={{ color: 'white', margin: '0', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}><Search size={14} /> Search IKEA</h4>
-                        <div style={{ display: 'flex', gap: '6px' }}>
-                            <input 
-                                type="text" 
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                                placeholder="e.g. Sofa, Billy, Table" 
-                                style={{ flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.3)', color: 'white', outline: 'none' }}
-                            />
-                            <button onClick={handleSearch} disabled={isSearching} style={{ background: '#38bdf8', color: '#0f172a', border: 'none', padding: '0 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>
+                    <div style={{ background: 'rgba(15, 23, 42, 0.75)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '16px', width: '320px', backdropFilter: 'blur(16px)', display: 'flex', flexDirection: 'column', gap: '12px', boxShadow: '0 10px 40px rgba(0,0,0,0.3)', maxHeight: '450px' }}>
+                        <h4 style={{ color: 'white', margin: '0', fontSize: '15px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}><Search size={16} /> Catalog</h4>
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder="e.g. Sofa, Billy, Table" style={{ flex: 1, padding: '8px 12px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.15)', background: 'rgba(0,0,0,0.4)', color: 'white', outline: 'none', fontSize: '13px' }} />
+                            <button onClick={handleSearch} disabled={isSearching} style={{ background: '#38bdf8', color: '#0f172a', border: 'none', padding: '0 12px', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}>
                                 {isSearching ? <Loader2 size={16} className="animate-spin" /> : 'Go'}
                             </button>
                         </div>
-
                         <div style={{ overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px', flex: 1, paddingRight: '4px' }}>
-                            {searchResults.length === 0 && !isSearching && <div style={{ color: '#94a3b8', fontSize: '12px', textAlign: 'center', padding: '20px 0' }}>พิมพ์เพื่อค้นหาสินค้าจาก IKEA</div>}
+                            {searchResults.length === 0 && !isSearching && <div style={{ color: '#94a3b8', fontSize: '12px', textAlign: 'center', padding: '20px 0' }}>Search for Poly Haven models (e.g. Sofa, Chair) to add them to your room.</div>}
                             {searchResults.map(item => (
-                                <div key={item.id} style={{ display: 'flex', gap: '12px', background: 'rgba(255,255,255,0.05)', padding: '8px', borderRadius: '8px', alignItems: 'center' }}>
+                                <div key={item.id} style={{ display: 'flex', gap: '12px', background: 'rgba(255,255,255,0.03)', padding: '8px', borderRadius: '10px', alignItems: 'center', border: '1px solid rgba(255,255,255,0.05)' }}>
                                     {item.image ? (
-                                        <img src={item.image} alt={item.name} style={{ width: '48px', height: '48px', objectFit: 'contain', background: 'white', borderRadius: '4px' }} />
+                                        <img src={item.image} alt={item.name} style={{ width: '48px', height: '48px', objectFit: 'contain', background: 'white', borderRadius: '6px' }} />
                                     ) : (
-                                        <div style={{ width: '48px', height: '48px', background: '#333', borderRadius: '4px' }} />
+                                        <div style={{ width: '48px', height: '48px', background: '#333', borderRadius: '6px' }} />
                                     )}
                                     <div style={{ flex: 1, overflow: 'hidden' }}>
-                                        <div style={{ color: 'white', fontSize: '13px', fontWeight: 'bold', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.name}</div>
-                                        <div style={{ color: '#94a3b8', fontSize: '11px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.type}</div>
+                                        <div style={{ color: 'white', fontSize: '13px', fontWeight: '600', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.name}</div>
+                                        <div style={{ color: '#94a3b8', fontSize: '11px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', marginTop: '2px' }}>{item.type}</div>
                                     </div>
-                                    <button 
-                                        onClick={() => handleAddItem(item.id, item.name)}
-                                        disabled={loadingModelId === item.id}
-                                        style={{ background: loadingModelId === item.id ? '#64748b' : '#10b981', color: 'white', border: 'none', width: '28px', height: '28px', borderRadius: '6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                                    >
-                                        {loadingModelId === item.id ? <Loader2 size={14} className="animate-spin" /> : <Plus size={16} />}
+                                    <button onClick={() => handleAddItem(item.id, item.name, item.modelUrl)} disabled={loadingModelId === item.id} style={{ background: loadingModelId === item.id ? 'rgba(255,255,255,0.1)' : '#10b981', color: 'white', border: 'none', width: '32px', height: '32px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        {loadingModelId === item.id ? <Loader2 size={16} className="animate-spin" /> : <Plus size={18} />}
                                     </button>
                                 </div>
                             ))}
@@ -565,104 +669,141 @@ export default function House3DViewer({ house }: { house: HouseData }) {
                 )}
             </div>
 
-            {/* FLOATING UI OVERLAY */}
-            <div style={{ position: 'absolute', top: 16, right: 16, zIndex: 10, display: 'flex', gap: '8px', flexDirection: 'column', alignItems: 'flex-end' }}>
-                <button 
-                    onClick={toggleFullscreen}
-                    style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px' }}
-                >
+            {/* RIGHT FLOATING UI: GLOBAL CONTROLS */}
+            <div style={{ position: 'absolute', top: '16px', right: '16px', zIndex: 20, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
+                <button onClick={toggleFullscreen} style={{ background: 'rgba(15, 23, 42, 0.65)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                     <Maximize size={16} /> {isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
                 </button>
-                <button 
-                    onClick={() => setMode(m => m === 'orbit' ? 'top' : 'orbit')}
-                    style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px' }}
-                >
-                    {mode === 'orbit' ? <Map size={16} /> : <Maximize size={16} />}
-                    {mode === 'orbit' ? 'Blueprint View' : '3D Orbit View'}
+                <button onClick={() => { if (mode === 'orbit') setMode('top'); else if (mode === 'top') setMode('person'); else setMode('orbit'); }} style={{ background: 'rgba(15, 23, 42, 0.65)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                    {mode === 'orbit' ? <Map size={16} /> : mode === 'top' ? <Eye size={16} /> : <Maximize size={16} />}
+                    {mode === 'orbit' ? 'Blueprint View' : mode === 'top' ? 'First Person View' : '3D Orbit View'}
                 </button>
-                
-                <button 
-                    onClick={() => setIsNight(!isNight)}
-                    style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px' }}
-                >
+                <button onClick={() => setIsNight(!isNight)} style={{ background: 'rgba(15, 23, 42, 0.65)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                     {isNight ? <Sun size={16} /> : <Moon size={16} />}
                     {isNight ? 'Day Mode' : 'Night Mode'}
                 </button>
-                
-                <button 
-                    onClick={takeSnapshot}
-                    style={{ background: 'rgba(56, 189, 248, 0.9)', border: 'none', color: '#0f172a', fontWeight: 'bold', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px', marginTop: '8px' }}
-                >
+                <button onClick={takeSnapshot} style={{ background: 'rgba(56, 189, 248, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#0f172a', fontWeight: 'bold', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                     <Camera size={16} /> Snapshot
                 </button>
-                <button 
-                    onClick={() => setShowMaterialPanel(!showMaterialPanel)}
-                    style={{ background: showMaterialPanel ? 'rgba(99, 102, 241, 0.9)' : 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(4px)', fontSize: '13px', marginTop: '4px' }}
-                >
+                <button onClick={() => setShowMaterialPanel(!showMaterialPanel)} style={{ background: 'rgba(16, 185, 129, 0.8)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', fontWeight: 'bold', padding: '8px 12px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', backdropFilter: 'blur(12px)', fontSize: '13px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                     <PaintBucket size={16} /> Materials
                 </button>
 
-                {/* MATERIALS PANEL */}
+                {/* MATERIAL PANEL */}
                 {showMaterialPanel && (
-                    <div style={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px', padding: '16px', width: '280px', backdropFilter: 'blur(10px)', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '400px', overflowY: 'auto' }}>
-                        <div>
-                            <h4 style={{ color: 'white', margin: '0 0 8px 0', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}><PaintBucket size={14} /> Wall Colors</h4>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '6px', marginBottom: '12px' }}>
-                                {wallColors.map(color => (
-                                    <div 
-                                        key={color} 
-                                        onClick={() => setWallColor(color)}
-                                        style={{ width: '100%', aspectRatio: '1/1', backgroundColor: color, borderRadius: '6px', cursor: 'pointer', border: wallColor === color ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)', transition: 'all 0.2s' }}
-                                        title={color}
-                                    />
-                                ))}
+                    <div style={{ background: 'rgba(15, 23, 42, 0.75)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '16px', width: '280px', backdropFilter: 'blur(16px)', display: 'flex', flexDirection: 'column', gap: '16px', boxShadow: '0 10px 40px rgba(0,0,0,0.3)', maxHeight: '400px', overflowY: 'auto' }}>
+                        {!selectedElement ? (
+                            <div style={{ color: '#94a3b8', fontSize: '13px', textAlign: 'center', padding: '20px 0' }}>
+                                Please click on a wall or floor in the 3D view to change its material.
                             </div>
-                            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                                <input 
-                                    type="color" 
-                                    value={wallColor} 
-                                    onChange={(e) => setWallColor(e.target.value)}
-                                    style={{ width: '40px', height: '40px', padding: 0, border: '1px solid rgba(255,255,255,0.2)', borderRadius: '6px', cursor: 'pointer', background: 'transparent' }}
-                                    title="Choose Custom Color (Eyedropper)"
-                                />
-                                <input 
-                                    type="text" 
-                                    value={wallColor} 
-                                    onChange={(e) => setWallColor(e.target.value)}
-                                    placeholder="#FFFFFF"
-                                    style={{ flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.3)', color: 'white', outline: 'none', fontSize: '13px', textTransform: 'uppercase' }}
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 style={{ color: 'white', margin: '0 0 8px 0', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}><Layers size={14} /> Floor Textures</h4>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
-                                <div 
-                                    onClick={() => setFloorTextureUrl(null)}
-                                    style={{ background: '#333', color: '#94a3b8', fontSize: '11px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60px', borderRadius: '8px', cursor: 'pointer', border: floorTextureUrl === null ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)' }}
-                                >
-                                    Default
+                        ) : selectedElement.type === 'wall' ? (
+                            <div>
+                                <h4 style={{ color: 'white', margin: '0 0 12px 0', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}><PaintBucket size={14} /> Wall Color</h4>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <input type="color" value={wallColorsMap[selectedElement.id] || '#f8f9fa'} onChange={(e) => setWallColorsMap(prev => ({...prev, [selectedElement.id]: e.target.value}))} style={{ width: '32px', height: '32px', padding: '0', border: 'none', borderRadius: '6px', cursor: 'pointer', background: 'transparent' }} />
+                                    <input type="text" value={wallColorsMap[selectedElement.id] || '#f8f9fa'} onChange={(e) => setWallColorsMap(prev => ({...prev, [selectedElement.id]: e.target.value}))} placeholder="#FFFFFF" style={{ flex: 1, padding: '6px 10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.3)', color: 'white', outline: 'none', fontSize: '13px' }} />
                                 </div>
-                                {floorTextures.map((tex) => (
-                                    <div 
-                                        key={tex.id}
-                                        onClick={() => setFloorTextureUrl(tex.url)}
-                                        style={{ 
-                                            height: '60px', borderRadius: '8px', cursor: 'pointer',
-                                            backgroundImage: `url(${tex.url})`, backgroundSize: 'cover', backgroundPosition: 'center',
-                                            border: floorTextureUrl === tex.url ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)'
-                                        }}
-                                        title={tex.name}
-                                    />
-                                ))}
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '6px' }}>
+                                    {wallColors.map((color) => (
+                                        <div key={color} onClick={() => setWallColorsMap(prev => ({...prev, [selectedElement.id]: color}))} style={{ width: '100%', aspectRatio: '1/1', backgroundColor: color, borderRadius: '6px', cursor: 'pointer', border: (wallColorsMap[selectedElement.id] || '#f8f9fa') === color ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)' }} />
+                                    ))}
+                                </div>
+                                <button 
+                                    onClick={() => {
+                                        const currentColor = wallColorsMap[selectedElement.id] || '#f8f9fa';
+                                        const newMap = { ...wallColorsMap };
+                                        walls.forEach(w => newMap[w.id] = currentColor);
+                                        setWallColorsMap(newMap);
+                                    }}
+                                    style={{ marginTop: '16px', width: '100%', background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', border: '1px solid rgba(56, 189, 248, 0.3)', padding: '8px', borderRadius: '8px', cursor: 'pointer', fontSize: '13px', fontWeight: '500', transition: 'all 0.2s' }}
+                                    onMouseOver={(e) => e.currentTarget.style.background = 'rgba(56, 189, 248, 0.2)'}
+                                    onMouseOut={(e) => e.currentTarget.style.background = 'rgba(56, 189, 248, 0.1)'}
+                                >
+                                    Apply to All Walls
+                                </button>
                             </div>
-                        </div>
+                        ) : (
+                            <div>
+                                <h4 style={{ color: 'white', margin: '0 0 12px 0', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}><Layers size={14} /> Floor Texture</h4>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
+                                    <div onClick={() => setFloorTexturesMap(prev => ({...prev, [selectedElement.id]: null}))} style={{ background: 'rgba(255,255,255,0.05)', color: '#94a3b8', fontSize: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60px', borderRadius: '8px', cursor: 'pointer', border: (floorTexturesMap[selectedElement.id] === undefined || floorTexturesMap[selectedElement.id] === null) ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)' }}>
+                                        Default
+                                    </div>
+                                    {floorTextures.map((tex) => (
+                                        <div key={tex.id} onClick={() => setFloorTexturesMap(prev => ({...prev, [selectedElement.id]: tex.url}))} style={{ height: '60px', borderRadius: '8px', cursor: 'pointer', backgroundImage: `url(${tex.url})`, backgroundSize: 'cover', backgroundPosition: 'center', border: floorTexturesMap[selectedElement.id] === tex.url ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.1)' }} title={tex.name} />
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
 
-            <Canvas ref={canvasRef} shadows gl={{ antialias: true, preserveDrawingBuffer: true }}>
+            {/* RIGHT PROPERTIES PANEL (SLIDES IN WHEN ITEM SELECTED) */}
+            <div style={{ position: 'absolute', top: '16px', right: selectedItemId ? '250px' : '-350px', zIndex: 10, transition: 'right 0.3s cubic-bezier(0.4, 0, 0.2, 1)', width: '280px' }}>
+                <div style={{ background: 'rgba(15, 23, 42, 0.75)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '20px', width: '100%', backdropFilter: 'blur(16px)', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.3)' }}>
+                    {selectedItem ? (
+                        <>
+                            <div>
+                                <h4 style={{ color: 'white', margin: '0 0 4px 0', fontSize: '16px', fontWeight: '600', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{selectedItem.name}</h4>
+                                <div style={{ color: '#94a3b8', fontSize: '13px' }}>Selected Item</div>
+                            </div>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                                <button 
+                                    style={{ background: 'rgba(59, 130, 246, 0.2)', color: '#60a5fa', border: '1px solid #3b82f6', padding: '10px', borderRadius: '10px', cursor: 'default', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}
+                                >
+                                    <Move size={20} />
+                                    <span style={{ fontSize: '12px' }}>Drag to Move</span>
+                                </button>
+                                <button 
+                                    onClick={() => {
+                                        setPlacedItems(items => items.map(i => {
+                                            if (i.id === selectedItemId) {
+                                                return { ...i, rotation: [i.rotation[0], i.rotation[1] + Math.PI / 2, i.rotation[2]] };
+                                            }
+                                            return i;
+                                        }));
+                                    }}
+                                    style={{ background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid rgba(255,255,255,0.1)', padding: '10px', borderRadius: '10px', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', transition: 'all 0.2s' }}
+                                    onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                                    onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+                                >
+                                    <RotateCcw size={20} />
+                                    <span style={{ fontSize: '12px' }}>Rotate 90°</span>
+                                </button>
+                            </div>
+                            
+                            <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', width: '100%' }} />
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                <button 
+                                    onClick={() => {
+                                        setSelectedItemId(null);
+                                        setShowSearchPanel(true);
+                                    }}
+                                    style={{ background: '#10b981', color: 'white', padding: '12px', borderRadius: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '14px', fontWeight: 'bold', border: 'none', transition: 'all 0.2s' }}
+                                >
+                                    <Plus size={18} /> Save & Add New
+                                </button>
+                                <button 
+                                    onClick={() => {
+                                        setPlacedItems(items => items.filter(i => i.id !== selectedItemId));
+                                        setSelectedItemId(null);
+                                    }}
+                                    style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#fca5a5', padding: '12px', borderRadius: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '14px', fontWeight: 'bold', transition: 'all 0.2s' }}
+                                >
+                                    <Trash2 size={18} /> Remove Item
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                        <div style={{ color: '#94a3b8', fontSize: '13px', textAlign: 'center' }}>No item selected</div>
+                    )}
+                </div>
+            </div>
+
+            <Canvas ref={canvasRef} onPointerMissed={() => { if (Date.now() - dragEndTimeRef.current < 200) return; setSelectedItemId(null); setSelectedElement(null); }} shadows dpr={[1, 1.5]} gl={{ antialias: true, preserveDrawingBuffer: true }}>
                 <CameraController mode={mode} bounds={bounds} />
 
                 {/* BACKGROUND & ENVIRONMENT */}
@@ -686,32 +827,72 @@ export default function House3DViewer({ house }: { house: HouseData }) {
                 )}
 
                 {/* HOUSE MODEL */}
-                <group position={[-bounds.centerX, 0, -bounds.centerZ]}>
-                    <BuildingFloor house={house} bounds={bounds} floorTextureUrl={floorTextureUrl} />
-                    {validRooms.length > 0 && validRooms.map(r => <RoomFloor key={r.id} room={r} floorTextureUrl={floorTextureUrl} />)}
-                    {walls.map((wall, idx) => <Wall key={wall.id || `w-${idx}`} wall={wall} doors={doors} windows={windows} isNight={isNight} wallColor={wallColor} />)}
+                <group position={[-bounds.centerX, 0, -bounds.centerZ]} onClick={() => { if (Date.now() - dragEndTimeRef.current < 200) return; setSelectedItemId(null); setSelectedElement(null); }}>
+                    {/* BUILDING FLOOR */}
+                    <BuildingFloor 
+                        house={house} 
+                        bounds={bounds} 
+                        floorTextureUrl={floorTexturesMap['building-floor'] || null} 
+                        isSelected={selectedElement?.type === 'floor' && selectedElement.id === 'building-floor'}
+                        onSelect={() => { if (Date.now() - dragEndTimeRef.current < 200) return; setSelectedElement({type: 'floor', id: 'building-floor'}); setShowMaterialPanel(true); setSelectedItemId(null); }}
+                    />
+
+                    {/* ROOM FLOORS */}
+                    {validRooms.map((room, i) => (
+                        <RoomFloor 
+                            key={`room-${i}`} 
+                            room={room} 
+                            floorTextureUrl={floorTexturesMap[room.id] || null} 
+                            isSelected={selectedElement?.type === 'floor' && selectedElement.id === room.id}
+                            onSelect={() => { if (Date.now() - dragEndTimeRef.current < 200) return; setSelectedElement({type: 'floor', id: room.id}); setShowMaterialPanel(true); setSelectedItemId(null); }}
+                        />
+                    ))}
+
+                    {/* WALLS */}
+                    {walls.map((wall, i) => (
+                        <Wall 
+                            key={`wall-${i}`} 
+                            wall={wall} 
+                            doors={doors} 
+                            windows={windows} 
+                            isNight={isNight} 
+                            wallColor={wallColorsMap[wall.id] || '#f8f9fa'} 
+                            isSelected={selectedElement?.type === 'wall' && selectedElement.id === wall.id}
+                            onSelect={() => { if (Date.now() - dragEndTimeRef.current < 200) return; setSelectedElement({type: 'wall', id: wall.id}); setShowMaterialPanel(true); setSelectedItemId(null); }}
+                        />
+                    ))}
                     
                     {/* PLACED FURNITURE */}
-                    <Suspense fallback={null}>
-                        {placedItems.map(item => (
-                            <FurnitureItem 
-                                key={item.id} 
-                                item={item} 
-                                onUpdate={(id, pos) => {
-                                    setPlacedItems(items => items.map(i => i.id === id ? { ...i, position: [pos.x, pos.y, pos.z] } : i));
-                                }} 
-                                onRemove={(id) => {
-                                    setPlacedItems(items => items.filter(i => i.id !== id));
-                                }} 
-                            />
-                        ))}
-                    </Suspense>
+                    {placedItems.map(item => (
+                        <FurnitureErrorBoundary key={item.id} position={item.position}>
+                            <Suspense fallback={<FurnitureLoading position={item.position} />}>
+                                <FurnitureItem 
+                                    item={item} 
+                                    isSelected={selectedItemId === item.id}
+                                    transformMode={transformMode}
+                                    onSelect={() => { setSelectedItemId(item.id); setSelectedElement(null); }}
+                                    setDragContext={setDragContext}
+                                    onUpdate={(id, pos, rot) => {
+                                        setPlacedItems(items => items.map(i => i.id === id ? { ...i, position: [pos.x, pos.y, pos.z], rotation: rot ? [rot.x, rot.y, rot.z] : i.rotation } : i));
+                                    }} 
+                                />
+                            </Suspense>
+                        </FurnitureErrorBoundary>
+                    ))}
                 </group>
 
                 {/* GRID FOR ARCHITECTURAL FEEL */}
                 <Grid position={[0, -0.01, 0]} args={[50, 50]} cellSize={1} cellThickness={0.5} cellColor={isNight ? "#2a2a3a" : "#4a4a5a"} sectionSize={5} sectionThickness={1} sectionColor={isNight ? "#3d3d5c" : "#6d6d8c"} fadeDistance={40} infiniteGrid />
 
-                <OrbitControls makeDefault enablePan enableZoom enableRotate />
+                <DragController 
+                    dragContext={dragContext} 
+                    setDragContext={setDragContext}
+                    onUpdate={(id: string, pos: any) => {
+                        setPlacedItems(items => items.map(i => i.id === id ? { ...i, position: [pos.x, pos.y, pos.z] } : i));
+                    }} 
+                />
+
+                <OrbitControls makeDefault enablePan enableZoom enableRotate enabled={!dragContext} />
             </Canvas>
         </div>
     );
